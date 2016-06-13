@@ -13,21 +13,53 @@ class OrderTableViewController: UITableViewController {
     
     var objects = [String]()
     var ref : FIRDatabaseReference? = nil
+    let drinkListRef :FIRDatabaseReference? = nil
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
+        self.navigationItem.rightBarButtonItem = addButton
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.ref = FIRDatabase.database().reference()
+        
+        
+        self.ref!.child("Orders").child("Drink").setValue(["username": "Jorge"])
+        //detects event changing will give event dictiolnary of what changed
+        
+        _ = self.ref!.child("users/Jorge/drinkList").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
+            if  let postDict = snapshot.value as? [String : String]{
+                self.objects = Array<String>(postDict.values)
+                
+                self.tableView.reloadData()
+    }
+        })
+    }
+    func insertNewObject(sender: AnyObject) {
+        
+        
+        let rangOfInts = [Int](65...91)
+        var rangeOfChars = rangOfInts.map{ value in
+            return Character(UnicodeScalar(value))
+        }
+        var uniqueString = ""
+        
+        for _ in 1...6{
+            let random = arc4random_uniform(UInt32 ( rangeOfChars.count))
+            uniqueString.append(rangeOfChars[Int(random)])
+            
+        }
+        objects.insert(uniqueString, atIndex: 0)
+        let  wordList = self.ref?.child("users/Jorge/wordList").childByAutoId()
+        wordList?.setValue(uniqueString)
+        
+        
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0 )
+        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     
     // MARK: - Table View
