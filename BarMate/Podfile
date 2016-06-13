@@ -8,4 +8,5 @@ target 'BarMate' do
   # Pods for BarMate
 pod 'Firebase'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 end

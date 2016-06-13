@@ -40,10 +40,13 @@ class LoginViewController: UIViewController {
                     
                     print(error!.localizedDescription)
                 }else{
-                    
-                    
+                
                     
                     print("Success")
+                    
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let initViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("OrderID") as UIViewController
+                    self.presentViewController(initViewController, animated: true, completion: nil)
                 }
             })
         }

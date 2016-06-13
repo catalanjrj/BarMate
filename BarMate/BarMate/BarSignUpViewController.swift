@@ -12,10 +12,17 @@ import Firebase
 class BarSignUpViewController: UIViewController {
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
+    @IBOutlet weak var CreateAccountButton: UIButton!
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello")
+    
+        EmailTextField.text = ""
+        PasswordTextField.text = ""
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -25,7 +32,14 @@ class BarSignUpViewController: UIViewController {
     }
 
     @IBAction func createAccountButton(sender: AnyObject) {
-        FIRAuth.auth()?.createUserWithEmail(EmailTextField.text!, password: PasswordTextField.text!, completion: {user, error in
+        if  EmailTextField.isFirstResponder() {
+            EmailTextField.resignFirstResponder()
+        }
+        if EmailTextField.text != "" && PasswordTextField.text != ""{
+            CreateAccountButton.enabled = true
+        
+            
+    FIRAuth.auth()?.createUserWithEmail(EmailTextField.text!, password: PasswordTextField.text!, completion: {user, error in
             if error != nil{
                 let alertController = UIAlertController(title: "Error", message:(error!.localizedDescription) , preferredStyle: .Alert)
                 
@@ -59,20 +73,22 @@ class BarSignUpViewController: UIViewController {
                 self.presentViewController(alertController, animated: true) {
                     
                 }
-                
-
+               
+           
            
             }
-            
         })
-        
-    }
-    @IBAction func CancelButton(sender: AnyObject) {
-        let cancelButtonTapped = self.dismissViewControllerAnimated(true, completion: nil)
-      
-        return cancelButtonTapped
+        }
+
     }
 
+    @IBAction func CancelButton(sender: AnyObject) {
+   dismissViewControllerAnimated(true, completion: nil)
+    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        <#code#>
+//    }
+    
         
     }
 
