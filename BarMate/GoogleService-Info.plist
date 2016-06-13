@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>749389074865-lbpkotthehui3nc4j9opsro1v5nvhlar.apps.googleusercontent.com</string>
+	<string>1089841695484-q3bkavme647l26cdau3gmsgmclet8jbh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.749389074865-lbpkotthehui3nc4j9opsro1v5nvhlar</string>
+	<string>com.googleusercontent.apps.1089841695484-q3bkavme647l26cdau3gmsgmclet8jbh</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBFPhd0u39bG7IsQIU9sclU3IkoVGgiPlw</string>
+	<string>AIzaSyCZeUKsnOv3CV6TdO7XvrV4XU2yIlnl4Gg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>749389074865</string>
+	<string>1089841695484</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Jorge-Catalan.BarMate</string>
 	<key>PROJECT_ID</key>
-	<string>project-1742892411430160086</string>
+	<string>project-4540339161294803210</string>
 	<key>STORAGE_BUCKET</key>
-	<string>project-1742892411430160086.appspot.com</string>
+	<string>project-4540339161294803210.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:749389074865:ios:b6e45ff79ca2c3e3</string>
+	<string>1:1089841695484:ios:b6e45ff79ca2c3e3</string>
 	<key>DATABASE_URL</key>
-	<string>https://project-1742892411430160086.firebaseio.com</string>
+	<string>https://project-4540339161294803210.firebaseio.com</string>
 </dict>
 </plist>

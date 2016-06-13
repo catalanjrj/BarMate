@@ -63,6 +63,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="fDg-no-Sek" eventType="touchUpInside" id="5d2-LC-9EB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HR-Lu-FS0">
                                 <rect key="frame" x="273" y="467" width="55" height="30"/>
@@ -70,7 +73,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="7MU-1B-J6E"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="tzL-4i-Qsl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,6 +101,11 @@
                             <constraint firstItem="9HR-Lu-FS0" firstAttribute="top" secondItem="2e8-1F-Xrb" secondAttribute="bottom" constant="37" id="nMK-pg-wcy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="mj9-sE-voL" id="OLE-EC-ShD"/>
+                        <outlet property="passwordTextField" destination="UKH-iw-lRB" id="T1m-3U-o9c"/>
+                        <outlet property="signUpButton" destination="9HR-Lu-FS0" id="Yi2-UW-of3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmx-02-RKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,15 +141,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38e-7d-MJn">
-                                <rect key="frame" x="247" y="384" width="107" height="30"/>
-                                <state key="normal" title="Create Account">
-                                    <color key="titleColor" red="0.94551447290359203" green="0.96479320553918724" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="createAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fg2-GD-xXL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fm-am-qQn">
                                 <rect key="frame" x="42" y="138" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -160,11 +159,38 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38e-7d-MJn">
+                                <rect key="frame" x="247" y="384" width="107" height="30"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" red="0.94551447290359203" green="0.96479320553918724" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oun-Qh-klG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHj-lX-t0c">
+                                <rect key="frame" x="273" y="65" width="55" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyy-H2-r3l">
+                                <rect key="frame" x="276" y="439" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVE-Pa-eFO"/>
+                                    <segue destination="fDg-no-Sek" kind="show" id="r2m-pV-GZM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.075505344476372596" green="0.1184784961435013" blue="0.1972032912234043" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KAa-72-HRc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2NW-TM-hU0"/>
                             <constraint firstItem="mvH-zQ-ZR7" firstAttribute="leading" secondItem="KAa-72-HRc" secondAttribute="leading" id="77c-W1-bcz"/>
+                            <constraint firstItem="GHj-lX-t0c" firstAttribute="top" secondItem="9I6-qe-4af" secondAttribute="bottom" constant="24" id="90d-sy-Pbx"/>
+                            <constraint firstItem="GHj-lX-t0c" firstAttribute="centerX" secondItem="9I6-qe-4af" secondAttribute="centerX" id="E3e-g0-Ctv"/>
                             <constraint firstItem="38e-7d-MJn" firstAttribute="centerX" secondItem="mvH-zQ-ZR7" secondAttribute="centerX" id="Elf-cA-aPh"/>
                             <constraint firstItem="7Fm-am-qQn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="Jek-gL-kaq"/>
                             <constraint firstItem="KAa-72-HRc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KYY-fh-Pep"/>
@@ -183,12 +209,37 @@
                     <connections>
                         <outlet property="EmailTextField" destination="KAa-72-HRc" id="bub-ez-g6V"/>
                         <outlet property="PasswordTextField" destination="mvH-zQ-ZR7" id="4cC-3a-SEE"/>
-                        <outlet property="createAccountButton" destination="38e-7d-MJn" id="o4t-dm-9t6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="267"/>
+            <point key="canvasLocation" x="245" y="267"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DM7-iC-Ex7">
+            <objects>
+                <viewController id="tYI-89-LWg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OeD-HM-68f"/>
+                        <viewControllerLayoutGuide type="bottom" id="rV1-RR-Enb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C9O-XR-0Vk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf2-hf-gKa">
+                                <rect key="frame" x="479" y="270" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWW-n0-Lgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="267"/>
         </scene>
     </scenes>
 </document>

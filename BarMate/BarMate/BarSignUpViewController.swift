@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//BarSignUpViewController.swift
 //  BarMate
 //
 //  Created by Jorge Catalan on 6/10/16.
@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BarSignUpViewController: UIViewController {
     @IBOutlet weak var EmailTextField: UITextField!
@@ -14,6 +15,7 @@ class BarSignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("hello")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,8 +25,55 @@ class BarSignUpViewController: UIViewController {
     }
 
     @IBAction func createAccountButton(sender: AnyObject) {
+        FIRAuth.auth()?.createUserWithEmail(EmailTextField.text!, password: PasswordTextField.text!, completion: {user, error in
+            if error != nil{
+                let alertController = UIAlertController(title: "Error", message:(error!.localizedDescription) , preferredStyle: .Alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                    // ...
+                }
+                alertController.addAction(cancelAction)
+                
+                let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                    // ...
+                }
+                alertController.addAction(OKAction)
+                
+                self.presentViewController(alertController, animated: true) {
+                    
+                }
+                
+            }else{
+                let alertController = UIAlertController(title: "Success!", message:"Your Acoount has been created" , preferredStyle: .Alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                    // ...
+                }
+                alertController.addAction(cancelAction)
+                
+                let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+                    // ...
+                }
+                alertController.addAction(OKAction)
+                
+                self.presentViewController(alertController, animated: true) {
+                    
+                }
+                
+
+           
+            }
+            
+        })
+        
+    }
+    @IBAction func CancelButton(sender: AnyObject) {
+        let cancelButtonTapped = self.dismissViewControllerAnimated(true, completion: nil)
+      
+        return cancelButtonTapped
+    }
+
         
     }
 
-}
 
