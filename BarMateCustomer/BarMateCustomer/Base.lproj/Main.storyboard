@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Customer Login View Controller-->
         <scene sceneID="KrU-x7-CuU">
             <objects>
-                <viewController id="5Bt-Uz-PWJ" sceneMemberID="viewController">
+                <viewController id="5Bt-Uz-PWJ" customClass="customerLoginViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P61-8V-CgS"/>
                         <viewControllerLayoutGuide type="bottom" id="Ydi-Pd-FiO"/>
@@ -27,15 +27,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7bG-kT-ygS">
-                                <rect key="frame" x="20" y="285" width="560" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="560" id="lhe-yq-yc1"/>
-                                    <constraint firstAttribute="height" constant="30" id="od6-9S-oUx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxa-1U-Gn7">
                                 <rect key="frame" x="255" y="377" width="90" height="39"/>
                                 <constraints>
@@ -45,6 +36,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="customerLoginButton:" destination="5Bt-Uz-PWJ" eventType="touchUpInside" id="coU-sU-qch"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4X-Ph-ST7">
                                 <rect key="frame" x="199" y="445" width="203" height="21"/>
@@ -52,6 +46,19 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cz-1R-CVO">
+                                <rect key="frame" x="259" y="489" width="83" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="5td-HZ-xaU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Sign Up!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nFZ-2z-yn8" kind="show" identifier="signUpSegue" id="T0i-tm-866"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0g-tU-XwW">
                                 <rect key="frame" x="21" y="180" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -70,19 +77,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cz-1R-CVO">
-                                <rect key="frame" x="259" y="489" width="83" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7bG-kT-ygS">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="5td-HZ-xaU"/>
+                                    <constraint firstAttribute="width" constant="560" id="lhe-yq-yc1"/>
+                                    <constraint firstAttribute="height" constant="30" id="od6-9S-oUx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Sign Up!">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="nFZ-2z-yn8" kind="show" identifier="signUpSegue" id="T0i-tm-866"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -108,15 +111,19 @@
                             <constraint firstItem="Mxa-1U-Gn7" firstAttribute="centerX" secondItem="7bG-kT-ygS" secondAttribute="centerX" id="wha-1Q-dhr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customerEmailTextField" destination="1FQ-tj-ZVB" id="ng5-Fw-wNC"/>
+                        <outlet property="customerPasswordTextField" destination="7bG-kT-ygS" id="UPp-pt-dMX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zr-wd-aTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1131" y="176"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer Signup View Controller-->
         <scene sceneID="pIg-qV-4JD">
             <objects>
-                <viewController id="nFZ-2z-yn8" sceneMemberID="viewController">
+                <viewController id="nFZ-2z-yn8" customClass="customerSignupViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IyI-J8-9XL"/>
                         <viewControllerLayoutGuide type="bottom" id="Rvj-Jg-IYZ"/>
@@ -152,12 +159,19 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButton:" destination="nFZ-2z-yn8" eventType="touchUpInside" id="wrR-ya-Uuc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTc-tA-l0u">
                                 <rect key="frame" x="276" y="470" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="CancelButton:" destination="nFZ-2z-yn8" eventType="touchUpInside" id="Umw-0Z-7Lq"/>
+                                    <segue destination="5Bt-Uz-PWJ" kind="show" id="ZiI-FN-PXu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnl-Rr-isU">
                                 <rect key="frame" x="270" y="101" width="61" height="21"/>
@@ -198,15 +212,19 @@
                             <constraint firstItem="BIs-dW-0Fj" firstAttribute="top" secondItem="jKj-tj-oe5" secondAttribute="top" constant="207" id="yOt-Gk-hlK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customerEmailTextField" destination="BIs-dW-0Fj" id="NL3-jb-afB"/>
+                        <outlet property="customerPasswordTextField" destination="OHw-bX-2ub" id="PvG-HD-Xqp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cek-O3-boM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-485" y="176"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Customer Drink Order Collection View Controller-->
         <scene sceneID="g7v-jZ-Mrs">
             <objects>
-                <collectionViewController id="vYN-3g-CMA" sceneMemberID="viewController">
+                <collectionViewController id="vYN-3g-CMA" customClass="customerDrinkOrderCollectionViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QUy-Ca-lpz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

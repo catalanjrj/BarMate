@@ -7,12 +7,50 @@
 //
 
 import UIKit
+import Firebase
 
 class customerSignupViewController: UIViewController {
+    @IBOutlet weak var customerEmailTextField: UITextField!
+    @IBOutlet weak var customerPasswordTextField: UITextField!
+    @IBOutlet weak var createAccountbutton: UIButton!
+    
+    //create buttons 
+    @IBAction func createAccountButton(sender: AnyObject) {
+        if customerEmailTextField.isFirstResponder(){
+            resignFirstResponder()
+        
+        }
+        // if text field are not empty enable create account buttton and create account
+        if customerEmailTextField.text != "" && customerPasswordTextField.text != ""{
+            
+        createAccountButton.enabled = true
+            
+            FIRAuth.auth()?.createUserWithEmail(customerEmailTextField.text!, password: customerPasswordTextField.text!, completion: {user, error in
+                if error != nil{
+                    let alertController = UIAlertController(title: "Error", message:(error!.localizedDescription) , preferredStyle: .Alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                        // ...
+                    }
+
+        
+            
+            
+        
+        
+        }
+        
+        
+    }
+    @IBAction func CancelButton(sender: AnyObject) {
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //set text fields to empty strings
+        customerEmailTextField.text = ""
+        customerPasswordTextField.text = ""
+        
         // Do any additional setup after loading the view.
     }
 

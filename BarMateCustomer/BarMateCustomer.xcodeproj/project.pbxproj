@@ -13,7 +13,7 @@
 		12B859C11D107ACC00E883A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BF1D107ACC00E883A6 /* LaunchScreen.storyboard */; };
 		12B859C91D107CC900E883A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B859C81D107CC900E883A6 /* GoogleService-Info.plist */; };
 		12B859CD1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */; };
-		12B859CF1D107EC100E883A6 /* costumerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CE1D107EC100E883A6 /* costumerLoginViewController.swift */; };
+		12B859CF1D107EC100E883A6 /* customerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */; };
 		12B859D11D107EDA00E883A6 /* customerSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */; };
 		DDA0CA86663C938B5C4A629D /* Pods_BarMateCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE18B03240D39A6924462B /* Pods_BarMateCustomer.framework */; };
 /* End PBXBuildFile section */
@@ -27,7 +27,7 @@
 		12B859C21D107ACC00E883A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BarMateCustomer/Info.plist; sourceTree = "<group>"; };
 		12B859C81D107CC900E883A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerDrinkOrderCollectionViewController.swift; sourceTree = "<group>"; };
-		12B859CE1D107EC100E883A6 /* costumerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = costumerLoginViewController.swift; sourceTree = "<group>"; };
+		12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerLoginViewController.swift; sourceTree = "<group>"; };
 		12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerSignupViewController.swift; sourceTree = "<group>"; };
 		56984FB8423A9C0434678B9F /* Pods-BarMateCustomer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMateCustomer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarMateCustomer/Pods-BarMateCustomer.release.xcconfig"; sourceTree = "<group>"; };
 		7AFE18B03240D39A6924462B /* Pods_BarMateCustomer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarMateCustomer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */,
-				12B859CE1D107EC100E883A6 /* costumerLoginViewController.swift */,
+				12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */,
 				12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */,
 			);
 			name = viewControllers;
@@ -238,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B859D11D107EDA00E883A6 /* customerSignupViewController.swift in Sources */,
-				12B859CF1D107EC100E883A6 /* costumerLoginViewController.swift in Sources */,
+				12B859CF1D107EC100E883A6 /* customerLoginViewController.swift in Sources */,
 				12B859CD1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift in Sources */,
 				12B859B71D107ACC00E883A6 /* AppDelegate.swift in Sources */,
 			);
