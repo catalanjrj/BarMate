@@ -15,6 +15,8 @@
 		12B859991D0B0A7E00E883A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859981D0B0A7E00E883A6 /* LoginViewController.swift */; };
 		12B8599F1D0B296F00E883A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B8599E1D0B296F00E883A6 /* GoogleService-Info.plist */; };
 		12B859A11D0EFACE00E883A6 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859A01D0EFACE00E883A6 /* OrderTableViewController.swift */; };
+		12B859A51D10770B00E883A6 /* possibleBackground1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12B859A41D10770B00E883A6 /* possibleBackground1.jpg */; };
+		12B859A71D10772500E883A6 /* possibleBackground1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12B859A61D10772500E883A6 /* possibleBackground1.jpg */; };
 		AC280EA532414B4B129FC562 /* Pods_BarMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF10D402CD540B6C5A0138B /* Pods_BarMate.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		12B859981D0B0A7E00E883A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12B8599E1D0B296F00E883A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12B859A01D0EFACE00E883A6 /* OrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		12B859A41D10770B00E883A6 /* possibleBackground1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = possibleBackground1.jpg; sourceTree = "<group>"; };
+		12B859A61D10772500E883A6 /* possibleBackground1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = possibleBackground1.jpg; sourceTree = "<group>"; };
 		3AF10D402CD540B6C5A0138B /* Pods_BarMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839321182F643C35B0BB312 /* Pods-BarMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarMate/Pods-BarMate.debug.xcconfig"; sourceTree = "<group>"; };
 		B9133997B4543C36D80D68C7 /* Pods-BarMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarMate/Pods-BarMate.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		12B859781D0B02C000E883A6 = {
 			isa = PBXGroup;
 			children = (
+				12B859A41D10770B00E883A6 /* possibleBackground1.jpg */,
+				12B859A61D10772500E883A6 /* possibleBackground1.jpg */,
 				12B8599E1D0B296F00E883A6 /* GoogleService-Info.plist */,
 				12B859831D0B02C000E883A6 /* BarMate */,
 				12B859821D0B02C000E883A6 /* Products */,
@@ -78,15 +84,31 @@
 			isa = PBXGroup;
 			children = (
 				12B859841D0B02C000E883A6 /* AppDelegate.swift */,
-				12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */,
-				12B859981D0B0A7E00E883A6 /* LoginViewController.swift */,
-				12B859881D0B02C000E883A6 /* Main.storyboard */,
-				12B859A01D0EFACE00E883A6 /* OrderTableViewController.swift */,
+				12B859A91D10792200E883A6 /* storyboard */,
+				12B859A81D1078FA00E883A6 /* viewControllers */,
 				12B8598B1D0B02C000E883A6 /* Assets.xcassets */,
-				12B8598D1D0B02C000E883A6 /* LaunchScreen.storyboard */,
 				12B859901D0B02C000E883A6 /* Info.plist */,
 			);
 			path = BarMate;
+			sourceTree = "<group>";
+		};
+		12B859A81D1078FA00E883A6 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */,
+				12B859981D0B0A7E00E883A6 /* LoginViewController.swift */,
+				12B859A01D0EFACE00E883A6 /* OrderTableViewController.swift */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		12B859A91D10792200E883A6 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				12B8598D1D0B02C000E883A6 /* LaunchScreen.storyboard */,
+				12B859881D0B02C000E883A6 /* Main.storyboard */,
+			);
+			name = storyboard;
 			sourceTree = "<group>";
 		};
 		AFF52C3CE163EC9D0FC1AE62 /* Frameworks */ = {
@@ -161,6 +183,8 @@
 			files = (
 				12B8598F1D0B02C000E883A6 /* LaunchScreen.storyboard in Resources */,
 				12B8599F1D0B296F00E883A6 /* GoogleService-Info.plist in Resources */,
+				12B859A71D10772500E883A6 /* possibleBackground1.jpg in Resources */,
+				12B859A51D10770B00E883A6 /* possibleBackground1.jpg in Resources */,
 				12B8598C1D0B02C000E883A6 /* Assets.xcassets in Resources */,
 				12B8598A1D0B02C000E883A6 /* Main.storyboard in Resources */,
 			);

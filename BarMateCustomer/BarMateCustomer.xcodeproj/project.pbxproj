@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12B859B71D107ACC00E883A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859B61D107ACC00E883A6 /* AppDelegate.swift */; };
+		12B859BC1D107ACC00E883A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BA1D107ACC00E883A6 /* Main.storyboard */; };
+		12B859BE1D107ACC00E883A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BD1D107ACC00E883A6 /* Assets.xcassets */; };
+		12B859C11D107ACC00E883A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BF1D107ACC00E883A6 /* LaunchScreen.storyboard */; };
+		12B859C91D107CC900E883A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B859C81D107CC900E883A6 /* GoogleService-Info.plist */; };
+		12B859CD1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */; };
+		12B859CF1D107EC100E883A6 /* costumerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CE1D107EC100E883A6 /* costumerLoginViewController.swift */; };
+		12B859D11D107EDA00E883A6 /* customerSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */; };
+		DDA0CA86663C938B5C4A629D /* Pods_BarMateCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE18B03240D39A6924462B /* Pods_BarMateCustomer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12B859B31D107ACC00E883A6 /* BarMateCustomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarMateCustomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12B859B61D107ACC00E883A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		12B859BB1D107ACC00E883A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12B859BD1D107ACC00E883A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12B859C01D107ACC00E883A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		12B859C21D107ACC00E883A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BarMateCustomer/Info.plist; sourceTree = "<group>"; };
+		12B859C81D107CC900E883A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerDrinkOrderCollectionViewController.swift; sourceTree = "<group>"; };
+		12B859CE1D107EC100E883A6 /* costumerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = costumerLoginViewController.swift; sourceTree = "<group>"; };
+		12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerSignupViewController.swift; sourceTree = "<group>"; };
+		56984FB8423A9C0434678B9F /* Pods-BarMateCustomer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMateCustomer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarMateCustomer/Pods-BarMateCustomer.release.xcconfig"; sourceTree = "<group>"; };
+		7AFE18B03240D39A6924462B /* Pods_BarMateCustomer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarMateCustomer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB4FB1A3315AA11E8541DA8 /* Pods-BarMateCustomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMateCustomer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarMateCustomer/Pods-BarMateCustomer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12B859B01D107ACC00E883A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA0CA86663C938B5C4A629D /* Pods_BarMateCustomer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12B859AA1D107ACC00E883A6 = {
+			isa = PBXGroup;
+			children = (
+				12B859C81D107CC900E883A6 /* GoogleService-Info.plist */,
+				12B859C21D107ACC00E883A6 /* Info.plist */,
+				12B859B51D107ACC00E883A6 /* BarMateCustomer */,
+				12B859B41D107ACC00E883A6 /* Products */,
+				8723ED97B25A4D1EC2D71E56 /* Pods */,
+				F08687E2919167DB4CBC510F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		12B859B41D107ACC00E883A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12B859B31D107ACC00E883A6 /* BarMateCustomer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12B859B51D107ACC00E883A6 /* BarMateCustomer */ = {
+			isa = PBXGroup;
+			children = (
+				12B859B61D107ACC00E883A6 /* AppDelegate.swift */,
+				12B859CB1D107DA700E883A6 /* storyboard */,
+				12B859CA1D107D9600E883A6 /* viewControllers */,
+				12B859BD1D107ACC00E883A6 /* Assets.xcassets */,
+			);
+			path = BarMateCustomer;
+			sourceTree = "<group>";
+		};
+		12B859CA1D107D9600E883A6 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */,
+				12B859CE1D107EC100E883A6 /* costumerLoginViewController.swift */,
+				12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		12B859CB1D107DA700E883A6 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				12B859BF1D107ACC00E883A6 /* LaunchScreen.storyboard */,
+				12B859BA1D107ACC00E883A6 /* Main.storyboard */,
+			);
+			name = storyboard;
+			sourceTree = "<group>";
+		};
+		8723ED97B25A4D1EC2D71E56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDB4FB1A3315AA11E8541DA8 /* Pods-BarMateCustomer.debug.xcconfig */,
+				56984FB8423A9C0434678B9F /* Pods-BarMateCustomer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F08687E2919167DB4CBC510F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AFE18B03240D39A6924462B /* Pods_BarMateCustomer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12B859B21D107ACC00E883A6 /* BarMateCustomer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12B859C51D107ACC00E883A6 /* Build configuration list for PBXNativeTarget "BarMateCustomer" */;
+			buildPhases = (
+				ED57776ADB144A7A1AB2273A /* 📦 Check Pods Manifest.lock */,
+				12B859AF1D107ACC00E883A6 /* Sources */,
+				12B859B01D107ACC00E883A6 /* Frameworks */,
+				12B859B11D107ACC00E883A6 /* Resources */,
+				AC28F0F97111CA1DD2517F4C /* 📦 Embed Pods Frameworks */,
+				D4355FA59C07D68416C65B0D /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarMateCustomer;
+			productName = BarMateCustomer;
+			productReference = 12B859B31D107ACC00E883A6 /* BarMateCustomer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12B859AB1D107ACC00E883A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jorge Catalan";
+				TargetAttributes = {
+					12B859B21D107ACC00E883A6 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DFHMFVHWS2;
+					};
+				};
+			};
+			buildConfigurationList = 12B859AE1D107ACC00E883A6 /* Build configuration list for PBXProject "BarMateCustomer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 12B859AA1D107ACC00E883A6;
+			productRefGroup = 12B859B41D107ACC00E883A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12B859B21D107ACC00E883A6 /* BarMateCustomer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12B859B11D107ACC00E883A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12B859C11D107ACC00E883A6 /* LaunchScreen.storyboard in Resources */,
+				12B859BE1D107ACC00E883A6 /* Assets.xcassets in Resources */,
+				12B859BC1D107ACC00E883A6 /* Main.storyboard in Resources */,
+				12B859C91D107CC900E883A6 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC28F0F97111CA1DD2517F4C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarMateCustomer/Pods-BarMateCustomer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4355FA59C07D68416C65B0D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarMateCustomer/Pods-BarMateCustomer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED57776ADB144A7A1AB2273A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12B859AF1D107ACC00E883A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12B859D11D107EDA00E883A6 /* customerSignupViewController.swift in Sources */,
+				12B859CF1D107EC100E883A6 /* costumerLoginViewController.swift in Sources */,
+				12B859CD1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift in Sources */,
+				12B859B71D107ACC00E883A6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		12B859BA1D107ACC00E883A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B859BB1D107ACC00E883A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		12B859BF1D107ACC00E883A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B859C01D107ACC00E883A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12B859C31D107ACC00E883A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		12B859C41D107ACC00E883A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12B859C61D107ACC00E883A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDB4FB1A3315AA11E8541DA8 /* Pods-BarMateCustomer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BarMateCustomer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Catalan.BarMateCustomer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		12B859C71D107ACC00E883A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56984FB8423A9C0434678B9F /* Pods-BarMateCustomer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BarMateCustomer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Catalan.BarMateCustomer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12B859AE1D107ACC00E883A6 /* Build configuration list for PBXProject "BarMateCustomer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12B859C31D107ACC00E883A6 /* Debug */,
+				12B859C41D107ACC00E883A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12B859C51D107ACC00E883A6 /* Build configuration list for PBXNativeTarget "BarMateCustomer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12B859C61D107ACC00E883A6 /* Debug */,
+				12B859C71D107ACC00E883A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12B859AB1D107ACC00E883A6 /* Project object */;
+}

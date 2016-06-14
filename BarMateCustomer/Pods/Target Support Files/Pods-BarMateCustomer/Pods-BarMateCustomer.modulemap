@@ -1,0 +1,6 @@
+framework module Pods_BarMateCustomer {
+  umbrella header "Pods-BarMateCustomer-umbrella.h"
+
+  export *
+  module * { export * }
+}
