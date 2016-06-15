@@ -13,10 +13,18 @@ class OrderTableViewController: UITableViewController {
     
     var objects = [String]()
     var ref : FIRDatabaseReference? = nil
-    let drinkListRef :FIRDatabaseReference? = nil
+    let username :FIRDatabaseReference? = nil
     
     
     override func viewDidLoad() {
+        func writeUserData(userId, name, email) {
+    self.ref('users/' + userId).set({
+                username: name,
+                email: email
+            });
+        }
+        
+        
         super.viewDidLoad()
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
@@ -25,12 +33,13 @@ class OrderTableViewController: UITableViewController {
         self.ref = FIRDatabase.database().reference()
         
         
-        self.ref!.child("Orders").child("Drink").setValue(["username": "Jorge"])
+        self.ref!.child("Users").child("User").setValue(["UserName": "Jorge"])
         //detects event changing will give event dictiolnary of what changed
         
-        _ = self.ref!.child("users/Jorge/drinkList").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
+        _ = self.ref!.child("users/Jorge/username").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
             if  let postDict = snapshot.value as? [String : String]{
                 self.objects = Array<String>(postDict.values)
+                
                 
                 self.tableView.reloadData()
     }
@@ -51,7 +60,7 @@ class OrderTableViewController: UITableViewController {
             
         }
         objects.insert(uniqueString, atIndex: 0)
-        let  wordList = self.ref?.child("users/Jorge/wordList").childByAutoId()
+        let  wordList = self.ref?.child("Users/Jorge/username").childByAutoId()
         wordList?.setValue(uniqueString)
         
         

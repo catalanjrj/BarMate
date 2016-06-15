@@ -17,6 +17,7 @@
 		12B859A11D0EFACE00E883A6 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859A01D0EFACE00E883A6 /* OrderTableViewController.swift */; };
 		12B859A51D10770B00E883A6 /* possibleBackground1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12B859A41D10770B00E883A6 /* possibleBackground1.jpg */; };
 		12B859A71D10772500E883A6 /* possibleBackground1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12B859A61D10772500E883A6 /* possibleBackground1.jpg */; };
+		12B859D41D11A18700E883A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D31D11A18700E883A6 /* User.swift */; };
 		AC280EA532414B4B129FC562 /* Pods_BarMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF10D402CD540B6C5A0138B /* Pods_BarMate.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		12B859A01D0EFACE00E883A6 /* OrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		12B859A41D10770B00E883A6 /* possibleBackground1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = possibleBackground1.jpg; sourceTree = "<group>"; };
 		12B859A61D10772500E883A6 /* possibleBackground1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = possibleBackground1.jpg; sourceTree = "<group>"; };
+		12B859D31D11A18700E883A6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3AF10D402CD540B6C5A0138B /* Pods_BarMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839321182F643C35B0BB312 /* Pods-BarMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarMate/Pods-BarMate.debug.xcconfig"; sourceTree = "<group>"; };
 		B9133997B4543C36D80D68C7 /* Pods-BarMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarMate/Pods-BarMate.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				12B859841D0B02C000E883A6 /* AppDelegate.swift */,
+				12B859D21D11A15F00E883A6 /* Objects */,
 				12B859A91D10792200E883A6 /* storyboard */,
 				12B859A81D1078FA00E883A6 /* viewControllers */,
 				12B8598B1D0B02C000E883A6 /* Assets.xcassets */,
@@ -109,6 +112,14 @@
 				12B859881D0B02C000E883A6 /* Main.storyboard */,
 			);
 			name = storyboard;
+			sourceTree = "<group>";
+		};
+		12B859D21D11A15F00E883A6 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				12B859D31D11A18700E883A6 /* User.swift */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		AFF52C3CE163EC9D0FC1AE62 /* Frameworks */ = {
@@ -248,6 +259,7 @@
 				12B859A11D0EFACE00E883A6 /* OrderTableViewController.swift in Sources */,
 				12B859991D0B0A7E00E883A6 /* LoginViewController.swift in Sources */,
 				12B859871D0B02C000E883A6 /* BarSignUpViewController.swift in Sources */,
+				12B859D41D11A18700E883A6 /* User.swift in Sources */,
 				12B859851D0B02C000E883A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

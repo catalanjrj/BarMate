@@ -18,12 +18,12 @@ class customerSignupViewController: UIViewController {
     @IBAction func createAccountButton(sender: AnyObject) {
         if customerEmailTextField.isFirstResponder(){
             resignFirstResponder()
-        
+    
         }
         // if text field are not empty enable create account buttton and create account
-        if customerEmailTextField.text != "" && customerPasswordTextField.text != ""{
+        if customerEmailTextField.text != "" && customerPasswordTextField.text != "" {
             
-        createAccountButton.enabled = true
+      createAccountbutton.enabled = true
             
             FIRAuth.auth()?.createUserWithEmail(customerEmailTextField.text!, password: customerPasswordTextField.text!, completion: {user, error in
                 if error != nil{
@@ -32,32 +32,56 @@ class customerSignupViewController: UIViewController {
                     let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
                         // ...
                     }
+                    alertController.addAction(cancelAction)
+                    
+                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                        // ...
+                    }
+                    alertController.addAction(OKAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        
+                    }
+                }else{
+                    
+                    
+                    let alertController = UIAlertController(title: "Success!", message:"Your Acoount has been created" , preferredStyle: .Alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                        // ...
+                    }
+                    alertController.addAction(cancelAction)
+                    
+                    let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+                        // ...
+                    }
+                    alertController.addAction(OKAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        
+                    }
 
-        
-            
-            
-        
-        
+                    
+
+                }
+            })
         }
-        
-        
-    }
-    @IBAction func CancelButton(sender: AnyObject) {
     }
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //set text fields to empty strings
         customerEmailTextField.text = ""
         customerPasswordTextField.text = ""
         
-        // Do any additional setup after loading the view.
-    }
+            }
+        
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+ 
+        
     
 
     /*

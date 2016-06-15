@@ -23,6 +23,7 @@ class BarSignUpViewController: UIViewController {
         PasswordTextField.text = ""
         
         
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -30,10 +31,12 @@ class BarSignUpViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
     @IBAction func createAccountButton(sender: AnyObject) {
         if  EmailTextField.isFirstResponder() {
             EmailTextField.resignFirstResponder()
+            
         }
         if EmailTextField.text != "" && PasswordTextField.text != ""{
             CreateAccountButton.enabled = true
@@ -79,8 +82,10 @@ class BarSignUpViewController: UIViewController {
             }
         })
         }
+        
 
     }
+    
 
     @IBAction func CancelButton(sender: AnyObject) {
    dismissViewControllerAnimated(true, completion: nil)
@@ -91,5 +96,6 @@ class BarSignUpViewController: UIViewController {
     
         
     }
+
 
 
