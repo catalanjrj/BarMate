@@ -16,10 +16,7 @@ class customerSignupViewController: UIViewController {
     
     //create buttons 
     @IBAction func createAccountButton(sender: AnyObject) {
-        if customerEmailTextField.isFirstResponder(){
-            resignFirstResponder()
-    
-        }
+        
         // if text field are not empty enable create account buttton and create account
         if customerEmailTextField.text != "" && customerPasswordTextField.text != "" {
             
@@ -76,7 +73,8 @@ class customerSignupViewController: UIViewController {
         //set text fields to empty strings
         customerEmailTextField.text = ""
         customerPasswordTextField.text = ""
-        
+        self.hideKeyboardWhenTappedAround()
+
             }
         
 

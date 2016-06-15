@@ -27,19 +27,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxa-1U-Gn7">
-                                <rect key="frame" x="255" y="377" width="90" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="kzM-o1-EQT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="customerLoginButton:" destination="5Bt-Uz-PWJ" eventType="touchUpInside" id="coU-sU-qch"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4X-Ph-ST7">
                                 <rect key="frame" x="199" y="445" width="203" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -86,6 +73,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxa-1U-Gn7">
+                                <rect key="frame" x="255" y="377" width="90" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="kzM-o1-EQT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="customerLoginButton:" destination="5Bt-Uz-PWJ" eventType="touchUpInside" id="coU-sU-qch"/>
+                                    <segue destination="zZZ-tp-fPf" kind="show" identifier="MenuSegue" id="Y4R-qj-hL4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -222,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="-485" y="176"/>
         </scene>
-        <!--View Controller-->
+        <!--Create User Profile View Controller-->
         <scene sceneID="yOB-sc-e6q">
             <objects>
-                <viewController id="mv4-gA-1dF" sceneMemberID="viewController">
+                <viewController id="mv4-gA-1dF" customClass="createUserProfileViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Bx-3M-NVE"/>
                         <viewControllerLayoutGuide type="bottom" id="3cY-7g-6wg"/>
@@ -243,25 +244,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your profile!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dct-GL-ZZx">
-                                <rect key="frame" x="227" y="115" width="147" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Informataion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dct-GL-ZZx">
+                                <rect key="frame" x="218" y="115" width="164" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-oh-TFJ">
-                                <rect key="frame" x="15" y="215" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQW-ou-ch5">
                                 <rect key="frame" x="15" y="300" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a7q-Nu-Q6l">
                                 <rect key="frame" x="20" y="401" width="560" height="88"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="wqn-Mw-MdO"/>
                                 </constraints>
@@ -293,6 +290,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-oh-TFJ">
+                                <rect key="frame" x="15" y="215" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -320,6 +322,9 @@
                             <constraint firstItem="bKc-oh-TFJ" firstAttribute="top" secondItem="VRh-TM-PLE" secondAttribute="bottom" constant="8" symbolic="YES" id="zL7-iD-xZP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="a7q-Nu-Q6l" id="98D-Lb-UKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnL-uv-QgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,7 +345,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vNk-hf-0fY">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -354,10 +359,29 @@
                             <outlet property="delegate" destination="vYN-3g-CMA" id="dO7-mN-XvS"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="Gvr-A3-hc0"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHc-AM-3b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1131" y="866"/>
+            <point key="canvasLocation" x="-1364" y="871"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ctF-gc-qOU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zZZ-tp-fPf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CIW-Os-PZI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vYN-3g-CMA" kind="relationship" relationship="rootViewController" id="F52-qr-Lae"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dC5-KD-VxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2074" y="871"/>
         </scene>
     </scenes>
 </document>

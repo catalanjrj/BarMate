@@ -17,14 +17,6 @@ class OrderTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
-        func writeUserData(userId, name, email) {
-    self.ref('users/' + userId).set({
-                username: name,
-                email: email
-            });
-        }
-        
-        
         super.viewDidLoad()
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton

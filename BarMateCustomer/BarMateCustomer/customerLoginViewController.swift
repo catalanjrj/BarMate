@@ -37,7 +37,11 @@ class customerLoginViewController: UIViewController {
             }else{
                 
                 print("Success")
-            
+                
+                //perform segue that moves to bars tableview controller
+                self.performSegueWithIdentifier("MenuSegue", sender: nil)
+                
+
                 
                 }
             
@@ -50,6 +54,8 @@ class customerLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -66,4 +72,15 @@ class customerLoginViewController: UIViewController {
     }
     */
 
+
+//dismiss keyboard when touch off of text fields
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

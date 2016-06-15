@@ -9,9 +9,14 @@
 import UIKit
 
 class createUserProfileViewController: UIViewController {
+    @IBOutlet weak var datePicker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
+        self.hideKeyboardWhenTappedAround()
+
+        
 
         // Do any additional setup after loading the view.
     }
