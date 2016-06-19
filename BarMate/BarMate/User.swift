@@ -10,10 +10,11 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class User: NSObject {
+class User {
     var id = String()
     var password = String()
-    var none = String()
+    var name = String()
+    var fullName = String()
  
     }
     

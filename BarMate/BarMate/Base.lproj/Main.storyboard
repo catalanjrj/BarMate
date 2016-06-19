@@ -68,7 +68,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="fDg-no-Sek" eventType="touchUpInside" id="5d2-LC-9EB"/>
-                                    <segue destination="lcS-zQ-pOy" kind="show" identifier="OrderSegue" id="65V-hP-9e4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HR-Lu-FS0">
@@ -113,6 +112,7 @@
                         <outlet property="emailTextField" destination="mj9-sE-voL" id="OLE-EC-ShD"/>
                         <outlet property="passwordTextField" destination="UKH-iw-lRB" id="T1m-3U-o9c"/>
                         <outlet property="signUpButton" destination="9HR-Lu-FS0" id="Yi2-UW-of3"/>
+                        <segue destination="lcS-zQ-pOy" kind="show" identifier="OrderSegue" id="Cso-N6-d7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmx-02-RKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,9 +142,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="bkd-Xx-KQa" kind="show" id="IjB-BV-fzE"/>
-                                </connections>
+                                <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -164,24 +162,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYZ-JA-NSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="277" y="990"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="dkr-lA-T6E">
-            <objects>
-                <viewController id="bkd-Xx-KQa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4af-8J-8C5"/>
-                        <viewControllerLayoutGuide type="bottom" id="eBl-oo-KXo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="N7K-1B-n7o">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GPj-JY-rQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="952" y="990"/>
         </scene>
         <!--BarSignUpViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -311,7 +291,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utj-Sy-RvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409" y="1030"/>
+            <point key="canvasLocation" x="-403" y="1000"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FFv-Rb-0KW">

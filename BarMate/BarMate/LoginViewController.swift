@@ -43,10 +43,8 @@ class LoginViewController: UIViewController {
                 
                     
                     print("Success")
+                 self.performSegueWithIdentifier("OrderSegue", sender: sender)
                     
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let initViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("OrderID") as UIViewController
-                    self.presentViewController(initViewController, animated: true, completion: nil)
                 }
             })
         }
@@ -56,3 +54,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
 }
+
+extension String
+{
+    func toDateTime() -> NSDate
+    {
+        //Create Date Formatter
+        let dateFormatter = NSDateFormatter()
+        
+        //Specify Format of String to Parse
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss.SSSSxxx"
+        
+        //Parse into NSDate
+        let dateFromString : NSDate = dateFormatter.dateFromString(self)!
+        
+        //Return Parsed Date
+        return dateFromString
+    }
+}
+
+
+
+
