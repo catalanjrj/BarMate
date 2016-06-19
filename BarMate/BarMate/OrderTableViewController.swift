@@ -12,7 +12,7 @@ import Firebase
 class OrderTableViewController: UITableViewController {
     // labels
     
-    var objects = [String]()
+    var label = [Order]()
     var ref : FIRDatabaseReference? = nil
     let username :FIRDatabaseReference? = nil
     var openOrderArray = [Order]()
@@ -24,12 +24,13 @@ class OrderTableViewController: UITableViewController {
       //  let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
        // self.navigationItem.rightBarButtonItem = addButton
 
-  
+  // Mark: References
         self.ref = FIRDatabase.database().reference()
         
                openOrders()
                completedOrders()
                fulfilledOrders()
+        
         self.ref!.child("Orders").child("open")
         self.ref!.child("Orders").child("completed")
       self.ref!.child("Orders").child("fulfilled")
@@ -121,11 +122,16 @@ class OrderTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath)
-        
 
-        //cell.textLabel!.text = object
+        let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath)
+     
+        let stuff =  Order(orderData: dictionaryWithValuesForKeys(["drink","user","orderTime"]))
+ 
+        cell.textLabel!.text = stuff.drink
         return cell
+
+       
+
     }
     
  override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
@@ -154,7 +160,7 @@ override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
      if editingStyle == .Delete {
-          objects.removeAtIndex(indexPath.row)
+          label.removeAtIndex(indexPath.row)
            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
