@@ -120,16 +120,47 @@ class OrderTableViewController: UITableViewController {
             return 0
         }
     }
+    // insert object 
+    func insertNewObject(sender: AnyObject) {
+        
+        
+         label.insert(indexatIndex: 0)
+        let  wordList = self.ref?.child("users/Jorge/wordList").childByAutoId()
+        wordList?.setValue(uniqueString)
+        
+        
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0 )
+        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+    }
+
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath)
-     
-        let stuff =  Order(orderData: dictionaryWithValuesForKeys(["drink","user","orderTime"]))
- 
-        cell.textLabel!.text = stuff.drink
-        return cell
+         cell.textLabel?.textColor = UIColor.whiteColor()
 
+        switch indexPath.section{
+        case 0:
+        openOrderArray[indexPath.row]
+            cell.textLabel?.text  = openOrderArray[indexPath.row].orderId
+            cell.detailTextLabel?.text = openOrderArray[indexPath.row].drink
+            
+            
+        case 1:
+        completedOrderArray[indexPath.row]
+            cell.textLabel?.text = completedOrderArray[indexPath.row].drink
+        case 2:
+            fulfilledOrderArray[indexPath.row]
+            cell.textLabel!.text = openOrderArray[indexPath.row].drink
+            
+        default:
+            return 
+        }
+
+//        cell.textLabel!.text = stuff.drink
+       return cell
+//
        
 
     }
