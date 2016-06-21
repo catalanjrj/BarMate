@@ -89,6 +89,9 @@ class OrderTableViewController: UITableViewController {
             var  fulfilledOrderArray = [Order]()
                 for fulfilledDict in fulfilledResponse.values{
                   fulfilledOrderArray.append(Order(orderData:fulfilledDict as! [String : AnyObject]))
+                    
+                    
+                    
              }
             self.fulfilledOrderArray = fulfilledOrderArray
             
@@ -192,14 +195,16 @@ class OrderTableViewController: UITableViewController {
             
             self.ref?.child("Orders").child("open").child(openOrders.uid).removeValue()
             
+            let orderToComplete = ["uid" :  openOrders.uid , "user" : openOrders.user, "drink": openOrders.drink, "orderTime": openOrders.orderTime, "image": openOrders.image, "orderId": openOrders.orderId]
             
+            self.ref?.child("Orders").child("completed").child(openOrders.uid).updateChildValues(orderToComplete)
             
-            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("uid").setValue(openOrders.uid)
-            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("user").setValue(openOrders.user)
-            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("drink").setValue(openOrders.drink)
-           self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderTime").setValue(openOrders.orderTime)
-            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("image").setValue(openOrders.image)
-            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderId").setValue(openOrders.orderId)
+//    self.ref?.child("Orders").child("completed").child(openOrders.uid).child("uid").setValue(openOrders.uid)
+//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("user").setValue(openOrders.user)
+//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("drink").setValue(openOrders.drink)
+//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderTime").setValue(openOrders.orderTime)
+//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("image").setValue(openOrders.image)
+//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderId").setValue(openOrders.orderId)
 
 
 
