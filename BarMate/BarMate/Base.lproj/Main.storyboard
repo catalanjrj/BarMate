@@ -123,31 +123,73 @@
         <scene sceneID="pgI-nh-BnP">
             <objects>
                 <tableViewController storyboardIdentifier="OrderID" id="sLg-aH-1VN" customClass="OrderTableViewController" customModule="BarMate" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zb2-Bv-BMJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="zb2-Bv-BMJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kJw-Lk-XRE">
-                            <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="177" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Log Out">
                                 <color key="titleColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="logOutButton:" destination="sLg-aH-1VN" eventType="touchUpInside" id="c5E-Xv-K4l"/>
+                                <segue destination="fDg-no-Sek" kind="show" identifier="backToLogin" id="FyD-kk-zdS"/>
+                            </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" id="OAF-I6-4gC">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="85" id="OAF-I6-4gC" customClass="orderCell" customModule="BarMate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OAF-I6-4gC" id="g0U-rv-r0x">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-SP-UI7">
+                                            <rect key="frame" x="14" y="8" width="229" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="229" id="Gp4-Yo-X4y"/>
+                                                <constraint firstAttribute="height" constant="21" id="OLN-Jl-ePl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61j-id-d4D">
+                                            <rect key="frame" x="147" y="37" width="68" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                            <color key="textColor" red="0.99309133976063835" green="0.99309133976063835" blue="0.99309133976063835" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="orderTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7X-98-El3">
+                                            <rect key="frame" x="470" y="25" width="122" height="33"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <color key="textColor" red="0.99858710106382975" green="0.99858710106382975" blue="0.99858710106382975" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4fK-SP-UI7" firstAttribute="leading" secondItem="g0U-rv-r0x" secondAttribute="leadingMargin" constant="6" id="3FK-PS-37p"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="61j-id-d4D" secondAttribute="bottom" constant="8" id="85K-4Y-MHe"/>
+                                        <constraint firstItem="4fK-SP-UI7" firstAttribute="top" secondItem="g0U-rv-r0x" secondAttribute="topMargin" id="EpY-2z-Zxm"/>
+                                        <constraint firstItem="61j-id-d4D" firstAttribute="leading" secondItem="g0U-rv-r0x" secondAttribute="leading" constant="147" id="IW6-Dv-abk"/>
+                                        <constraint firstItem="61j-id-d4D" firstAttribute="top" secondItem="4fK-SP-UI7" secondAttribute="bottom" constant="8" symbolic="YES" id="JqP-yX-pCh"/>
+                                        <constraint firstItem="V7X-98-El3" firstAttribute="centerY" secondItem="g0U-rv-r0x" secondAttribute="centerY" id="cK0-Il-DIo"/>
+                                        <constraint firstItem="V7X-98-El3" firstAttribute="trailing" secondItem="g0U-rv-r0x" secondAttribute="trailingMargin" id="wdm-Em-4L7"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="drinkLabel" destination="61j-id-d4D" id="dbT-44-h64"/>
+                                    <outlet property="orderTimeLabel" destination="V7X-98-El3" id="Osg-S9-yjy"/>
+                                    <outlet property="userLabel" destination="4fK-SP-UI7" id="sPd-GH-PkY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="sLg-aH-1VN" id="sQj-t3-mh8"/>
-                            <outlet property="delegate" destination="sLg-aH-1VN" id="n2R-Nn-ybJ"/>
+                            <outlet property="dataSource" destination="sLg-aH-1VN" id="BNU-GY-5PP"/>
+                            <outlet property="delegate" destination="sLg-aH-1VN" id="Wsj-IM-C6c"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hcw-SW-NOz">
@@ -373,4 +415,7 @@
     <resources>
         <image name="possibleBackground1.jpg" width="1664" height="2500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FyD-kk-zdS"/>
+    </inferredMetricsTieBreakers>
 </document>

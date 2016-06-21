@@ -50,7 +50,6 @@ class LoginViewController: UIViewController {
         }
 
     
-    
     @IBOutlet weak var signUpButton: UIButton!
     
 }

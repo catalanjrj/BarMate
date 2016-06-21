@@ -10,6 +10,7 @@
 		1201584E1D12E2F400055BA5 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201584D1D12E2F400055BA5 /* Drink.swift */; };
 		120158501D12E35A00055BA5 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201584F1D12E35A00055BA5 /* Bar.swift */; };
 		120158521D12ED2D00055BA5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120158511D12ED2D00055BA5 /* Order.swift */; };
+		122033A71D1880FC005BFF5A /* orderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033A61D1880FC005BFF5A /* orderCell.swift */; };
 		12B859851D0B02C000E883A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859841D0B02C000E883A6 /* AppDelegate.swift */; };
 		12B859871D0B02C000E883A6 /* BarSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */; };
 		12B8598A1D0B02C000E883A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859881D0B02C000E883A6 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		1201584D1D12E2F400055BA5 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		1201584F1D12E35A00055BA5 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		120158511D12ED2D00055BA5 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		122033A61D1880FC005BFF5A /* orderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderCell.swift; sourceTree = "<group>"; };
 		12B859811D0B02C000E883A6 /* BarMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B859841D0B02C000E883A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSignUpViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				1201584D1D12E2F400055BA5 /* Drink.swift */,
 				1201584F1D12E35A00055BA5 /* Bar.swift */,
 				120158511D12ED2D00055BA5 /* Order.swift */,
+				122033A61D1880FC005BFF5A /* orderCell.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				12B859871D0B02C000E883A6 /* BarSignUpViewController.swift in Sources */,
 				12B859D41D11A18700E883A6 /* User.swift in Sources */,
 				1201584E1D12E2F400055BA5 /* Drink.swift in Sources */,
+				122033A71D1880FC005BFF5A /* orderCell.swift in Sources */,
 				12B859851D0B02C000E883A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

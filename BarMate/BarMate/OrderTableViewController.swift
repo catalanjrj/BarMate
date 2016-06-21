@@ -19,6 +19,20 @@ class OrderTableViewController: UITableViewController {
     var completedOrderArray = [Order]()
     var fulfilledOrderArray = [Order]()
     
+    @IBAction func logOutButton(sender: AnyObject) {
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        
+            performSegueWithIdentifier("backToLogin", sender: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: \(signOutError)")
+        }
+    
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       //  let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
@@ -120,45 +134,48 @@ class OrderTableViewController: UITableViewController {
             return 0
         }
     }
-    // insert object 
-    func insertNewObject(sender: AnyObject) {
-        
-        
-         label.insert(indexatIndex: 0)
-        let  wordList = self.ref?.child("users/Jorge/wordList").childByAutoId()
-        wordList?.setValue(uniqueString)
-        
-        
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0 )
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        
-    }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath)
-         cell.textLabel?.textColor = UIColor.whiteColor()
+        let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath) as! orderCell
+        
 
         switch indexPath.section{
+            
         case 0:
-        openOrderArray[indexPath.row]
-            cell.textLabel?.text  = openOrderArray[indexPath.row].orderId
-            cell.detailTextLabel?.text = openOrderArray[indexPath.row].drink
+               let label = openOrderArray[indexPath.row]
+         
+                cell.userLabel.text! = label.user
+               
+            
+                cell.drinkLabel.text! = label.drink
+            
+               
+               
+               
+               cell.orderTimeLabel.text =  label.orderTime
+               
+           
             
             
         case 1:
-        completedOrderArray[indexPath.row]
-            cell.textLabel?.text = completedOrderArray[indexPath.row].drink
+     let label = completedOrderArray[indexPath.row]
+            cell.userLabel?.text = label.user
+            cell.drinkLabel.text = label.drink
+            cell.orderTimeLabel.text = label.orderTime
+            
         case 2:
-            fulfilledOrderArray[indexPath.row]
-            cell.textLabel!.text = openOrderArray[indexPath.row].drink
+           let label =  fulfilledOrderArray[indexPath.row]
+            cell.userLabel.text = label.user
+            cell.drinkLabel.text = label.drink
+            cell.orderTimeLabel.text = label.orderTime
+          
             
         default:
-            return 
+            return cell
+            
         }
 
-//        cell.textLabel!.text = stuff.drink
        return cell
 //
        
@@ -168,8 +185,28 @@ class OrderTableViewController: UITableViewController {
  override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let completed = UITableViewRowAction(style: .Normal, title: "completed") { action, index in
             print("completed button tapped")
-    
             
+           let openOrders = self.openOrderArray[indexPath.row]
+            
+//            guard let uid = openOrders.uid, let user = openOrders.user, let drink = openOrders.drink, let image = openOrders.image, let orderTime = openOrders.orderTime, let orderId = openOrders.orderId else {return}
+            
+            self.ref?.child("Orders").child("open").child(openOrders.uid).removeValue()
+            
+            
+            
+            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("uid").setValue(openOrders.uid)
+            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("user").setValue(openOrders.user)
+            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("drink").setValue(openOrders.drink)
+           self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderTime").setValue(openOrders.orderTime)
+            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("image").setValue(openOrders.image)
+            self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderId").setValue(openOrders.orderId)
+
+
+
+
+
+            
+    
         }
         completed.backgroundColor = UIColor.yellowColor()
     
