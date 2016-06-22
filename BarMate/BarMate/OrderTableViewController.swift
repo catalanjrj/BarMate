@@ -148,19 +148,9 @@ class OrderTableViewController: UITableViewController {
         case 0:
                let label = openOrderArray[indexPath.row]
          
-                cell.userLabel.text! = label.user
-               
-            
-                cell.drinkLabel.text! = label.drink
-            
-               
-               
-               
-               cell.orderTimeLabel.text =  label.orderTime
-               
-           
-            
-            
+            cell.userLabel.text! = label.user
+            cell.drinkLabel.text! = label.drink
+            cell.orderTimeLabel.text =  label.orderTime
         case 1:
      let label = completedOrderArray[indexPath.row]
             cell.userLabel?.text = label.user
@@ -172,7 +162,6 @@ class OrderTableViewController: UITableViewController {
             cell.userLabel.text = label.user
             cell.drinkLabel.text = label.drink
             cell.orderTimeLabel.text = label.orderTime
-          
             
         default:
             return cell
@@ -186,19 +175,21 @@ class OrderTableViewController: UITableViewController {
     }
     
  override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let completed = UITableViewRowAction(style: .Normal, title: "completed") { action, index in
+        let completedButton = UITableViewRowAction(style: .Normal, title: "completed") { action, index in
             print("completed button tapped")
             
            let openOrders = self.openOrderArray[indexPath.row]
+         
             
 //            guard let uid = openOrders.uid, let user = openOrders.user, let drink = openOrders.drink, let image = openOrders.image, let orderTime = openOrders.orderTime, let orderId = openOrders.orderId else {return}
             
             self.ref?.child("Orders").child("open").child(openOrders.uid).removeValue()
+            //self.ref?.child("Orders").child("fulfilled").child(fulfilledOrders.uid).removeValue()
             
-            let orderToComplete = ["uid" :  openOrders.uid , "user" : openOrders.user, "drink": openOrders.drink, "orderTime": openOrders.orderTime, "image": openOrders.image, "orderId": openOrders.orderId]
+            let orderToMove = ["uid" :  openOrders.uid , "user" : openOrders.user, "drink": openOrders.drink, "orderTime": openOrders.orderTime, "image": openOrders.image, "orderId": openOrders.orderId]
             
-            self.ref?.child("Orders").child("completed").child(openOrders.uid).updateChildValues(orderToComplete)
-            
+            self.ref?.child("Orders").child("completed").child(openOrders.uid).updateChildValues(orderToMove)
+          
 //    self.ref?.child("Orders").child("completed").child(openOrders.uid).child("uid").setValue(openOrders.uid)
 //        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("user").setValue(openOrders.user)
 //        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("drink").setValue(openOrders.drink)
@@ -207,22 +198,23 @@ class OrderTableViewController: UITableViewController {
 //        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderId").setValue(openOrders.orderId)
 
 
-
-
-
-            
-    
         }
-        completed.backgroundColor = UIColor.yellowColor()
+        completedButton.backgroundColor = UIColor.yellowColor()
     
         let fulfilled = UITableViewRowAction(style: .Normal, title: "fulfilled") { action, index in
             print("fulfilled button tapped")
-        }
+              let completedOrders = self.completedOrderArray[index.row]
+            
+                 self.ref?.child("Orders").child("completed").child(completedOrders.uid).removeValue()
+            
+                 let orderToMove = ["uid" :  completedOrders.uid , "user" : completedOrders.user, "drink": completedOrders.drink, "orderTime": completedOrders.orderTime, "image": completedOrders.image, "orderId": completedOrders.orderId]
+            
+            self.ref?.child("Orders").child("fulfilled").child(completedOrders.uid).updateChildValues(orderToMove)
+         
+     }
         fulfilled.backgroundColor = UIColor.greenColor()
-        
     
-        
-    return [ completed, fulfilled]
+    return [ completedButton, fulfilled]
     }
     
     
