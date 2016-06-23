@@ -30,7 +30,7 @@ class Drink {
         
     
     }
-    
+    // for(key.value) in barMenuDict
     
     func createMeFromFirebase(Data: [String:String]){
         

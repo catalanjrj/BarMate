@@ -9,97 +9,127 @@
 import UIKit
 import FirebaseDatabase
 import Firebase
+import FirebaseAuth
 class OrderTableViewController: UITableViewController {
     // labels
     
     var label = [Order]()
-    var ref : FIRDatabaseReference? = nil
+    var ref : FIRDatabaseReference = FIRDatabase.database().reference()
     let username :FIRDatabaseReference? = nil
-    var openOrderArray = [Order]()
-    var completedOrderArray = [Order]()
-    var fulfilledOrderArray = [Order]()
+    var openOrderArray = [String]()
+    var openOrderDict = [String:Order]()
     
-    @IBAction func logOutButton(sender: AnyObject) {
-        let firebaseAuth = FIRAuth.auth()
-        do {
-            try firebaseAuth?.signOut()
-        
-            performSegueWithIdentifier("backToLogin", sender: nil)
-        } catch let signOutError as NSError {
-            print ("Error signing out: \(signOutError)")
-        }
+    var completedOrderArray = [String]()
+    var completedOrderDict = [String:Order]()
     
-        
-    }
+    var fulfilledOrderArray = [String]()
+    var fulfilledOrderDict = [String:Order]()
     
     
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
+        //  let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
        // self.navigationItem.rightBarButtonItem = addButton
-
-  // Mark: References
-        self.ref = FIRDatabase.database().reference()
-        
-               openOrders()
-               completedOrders()
-               fulfilledOrders()
-        
-        self.ref!.child("Orders").child("open")
-        self.ref!.child("Orders").child("completed")
-      self.ref!.child("Orders").child("fulfilled")
-        //detects event changing will give event dictiolnary of what changed
-        
     }
     
-        func openOrders(){
-        self.ref!.child("Orders/open/").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
-            if  let openResponse = snapshot.value as? [String : AnyObject]{
-                var  openOrderArray = [Order]()
-                for openDict in openResponse.values{
-                    openOrderArray.append(Order(orderData:openDict as! [String : AnyObject]))
-                }
-                self.openOrderArray = openOrderArray
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.ref.removeAllObservers()
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        openOrders()
+        completedOrders()
+        fulfilledOrders()
+    }
+    
+    func openOrders(){
+        self.ref.child("Orders/open/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildAdded, withBlock: {(snapshot) in
+            guard snapshot.value != nil else{
+                return
             }
             
+            self.openOrderArray.append(snapshot.key)
+            
+            self.openOrderDict[snapshot.key] = Order(orderData: snapshot.value as! [String : AnyObject])
+            
+            
             dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
-
+            
+        })
+        self.ref.child("Orders/open/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildRemoved, withBlock: {(snapshot) in
+            self.openOrderDict.removeValueForKey(snapshot.key)
+            let  openIndex =  self.openOrderArray.indexOf(snapshot.key)
+            self.openOrderArray.removeAtIndex(openIndex!)
+            
+            dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
+            
         })
     }
     
         func completedOrders(){
-        self.ref!.child("Orders/completed/").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
-           if  let completedResponse = snapshot.value as? [String : AnyObject]{
-                var  completedOrderArray = [Order]()
-                for completedDict in completedResponse.values{
-                    completedOrderArray.append(Order(orderData: completedDict as! [String:AnyObject]))
-               }
+        self.ref.child("Orders/completed/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildAdded, withBlock: {(snapshot) in
+            guard snapshot.value != nil else{
+            return
+            }
+       
+            self.completedOrderArray.append(snapshot.key)
             
-            self.completedOrderArray =  completedOrderArray
+            self.completedOrderDict[snapshot.key] = Order(orderData: snapshot.value as! [String : AnyObject])
+              
             
-           
-          }
             dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
      
       })
-       }
-       func fulfilledOrders(){
-        self.ref!.child("Orders/fulfilled/").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
-        if  let fulfilledResponse = snapshot.value as? [String : AnyObject]{
-            var  fulfilledOrderArray = [Order]()
-                for fulfilledDict in fulfilledResponse.values{
-                  fulfilledOrderArray.append(Order(orderData:fulfilledDict as! [String : AnyObject]))
-                    
-                    
-                    
-             }
-            self.fulfilledOrderArray = fulfilledOrderArray
             
-           }
-              dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
-   })
+            self.ref.child("Orders/completed/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildRemoved, withBlock: {(snapshot) in
+             self.completedOrderDict.removeValueForKey(snapshot.key)
+               let  completedIndex =  self.completedOrderArray.indexOf(snapshot.key)
+                self.completedOrderArray.removeAtIndex(completedIndex!)
+
+                dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
+                
+            })
     }
+                func fulfilledOrders(){
+                self.ref.child("Orders/fulfilled/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildAdded, withBlock: {(snapshot) in
+                    guard snapshot.value != nil else{
+                        return
+                    }
+                    
+                    
+                    self.fulfilledOrderArray.append(snapshot.key)
+                    
+                    self.fulfilledOrderDict[snapshot.key] = Order(orderData: snapshot.value as! [String : AnyObject])
+                    
+                    
+                    dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
+                    
+                })
+               
+                
+                self.ref.child("Orders/fulfilled/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildRemoved, withBlock: {(snapshot) in
+                    self.fulfilledOrderDict.removeValueForKey(snapshot.key)
+                    let  fulfilledIndex =  self.fulfilledOrderArray.indexOf(snapshot.key)
+                    self.fulfilledOrderArray.removeAtIndex(fulfilledIndex!)
+                    
+                    dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
+                    
+                })
+            }
     
+
+    
+
+    
+ 
+    
+            
+       
     
 //    func insertNewObject(sender: AnyObject) {
 //        
@@ -147,21 +177,25 @@ class OrderTableViewController: UITableViewController {
             
         case 0:
                let label = openOrderArray[indexPath.row]
+               let order = openOrderDict[label]
          
-            cell.userLabel.text! = label.user
-            cell.drinkLabel.text! = label.drink
-            cell.orderTimeLabel.text =  label.orderTime
+            cell.userLabel.text! = order!.user
+            cell.drinkLabel.text! = order!.drink
+            cell.orderTimeLabel.text =  order!.orderTime
         case 1:
      let label = completedOrderArray[indexPath.row]
-            cell.userLabel?.text = label.user
-            cell.drinkLabel.text = label.drink
-            cell.orderTimeLabel.text = label.orderTime
+     let order = completedOrderDict[label]
+            cell.userLabel?.text = order!.user
+            cell.drinkLabel.text = order!.drink
+            cell.orderTimeLabel.text = order!.orderTime
             
         case 2:
            let label =  fulfilledOrderArray[indexPath.row]
-            cell.userLabel.text = label.user
-            cell.drinkLabel.text = label.drink
-            cell.orderTimeLabel.text = label.orderTime
+           let order = fulfilledOrderDict[label]
+           
+            cell.userLabel.text = order!.user
+            cell.drinkLabel.text = order!.drink
+            cell.orderTimeLabel.text = order!.orderTime
             
         default:
             return cell
@@ -179,18 +213,18 @@ class OrderTableViewController: UITableViewController {
             print("completed button tapped")
             
            let openOrders = self.openOrderArray[indexPath.row]
-         
+            let order = self.openOrderDict[openOrders]
             
 //            guard let uid = openOrders.uid, let user = openOrders.user, let drink = openOrders.drink, let image = openOrders.image, let orderTime = openOrders.orderTime, let orderId = openOrders.orderId else {return}
             
-            self.ref?.child("Orders").child("open").child(openOrders.uid).removeValue()
+            self.ref.child("Orders").child("open").child(order!.uid).removeValue()
             //self.ref?.child("Orders").child("fulfilled").child(fulfilledOrders.uid).removeValue()
             
-            let orderToMove = ["uid" :  openOrders.uid , "user" : openOrders.user, "drink": openOrders.drink, "orderTime": openOrders.orderTime, "image": openOrders.image, "orderId": openOrders.orderId]
+            let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime, "image": order!.image, "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
-            self.ref?.child("Orders").child("completed").child(openOrders.uid).updateChildValues(orderToMove)
+            self.ref.child("Orders").child("completed").child(order!.uid).updateChildValues(orderToMove)
           
-//    self.ref?.child("Orders").child("completed").child(openOrders.uid).child("uid").setValue(openOrders.uid)
+//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("uid").setValue(openOrders.uid)
 //        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("user").setValue(openOrders.user)
 //        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("drink").setValue(openOrders.drink)
 //        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderTime").setValue(openOrders.orderTime)
@@ -199,20 +233,22 @@ class OrderTableViewController: UITableViewController {
 
 
         }
-        completedButton.backgroundColor = UIColor.yellowColor()
+        completedButton.backgroundColor = UIColor.orangeColor()
     
         let fulfilled = UITableViewRowAction(style: .Normal, title: "fulfilled") { action, index in
             print("fulfilled button tapped")
+            
               let completedOrders = self.completedOrderArray[index.row]
+              let order = self.completedOrderDict[completedOrders]
             
-                 self.ref?.child("Orders").child("completed").child(completedOrders.uid).removeValue()
+                 self.ref.child("Orders").child("completed").child(order!.uid).removeValue()
             
-                 let orderToMove = ["uid" :  completedOrders.uid , "user" : completedOrders.user, "drink": completedOrders.drink, "orderTime": completedOrders.orderTime, "image": completedOrders.image, "orderId": completedOrders.orderId]
+                 let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime, "image": order!.image, "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
-            self.ref?.child("Orders").child("fulfilled").child(completedOrders.uid).updateChildValues(orderToMove)
+            self.ref.child("Orders").child("fulfilled").child(order!.uid).updateChildValues(orderToMove)
          
      }
-        fulfilled.backgroundColor = UIColor.greenColor()
+        fulfilled.backgroundColor = UIColor.grayColor()
     
     return [ completedButton, fulfilled]
     }

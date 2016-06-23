@@ -8,16 +8,32 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) in
+            if user != nil {
+           self.performSegueWithIdentifier("OrderSegue", sender: nil)
+            }
+        })
+        
+        
     }
+    
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+try! FIRAuth.auth()!.signOut()
+  
+        }
+
+       
+
+    
     @IBAction func loginButton(sender: AnyObject) {
    FIRAuth.auth()?.signInWithEmail(emailTextField.text!, password: passwordTextField.text!, completion: {user, error in
                 
