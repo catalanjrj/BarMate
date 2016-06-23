@@ -37,9 +37,8 @@ class customerLoginViewController: UIViewController {
             }else{
                 
                 print("Success")
-                
                 //perform segue that moves to bars tableview controller
-                self.performSegueWithIdentifier("MenuSegue", sender: nil)
+                self.performSegueWithIdentifier("barSegue", sender: sender)
                 
 
                 

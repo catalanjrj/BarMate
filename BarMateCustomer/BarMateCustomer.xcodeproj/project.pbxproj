@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122033A91D1C24DD005BFF5A /* selectBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033A81D1C24DD005BFF5A /* selectBarTableViewController.swift */; };
+		122033AB1D1C2509005BFF5A /* barCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033AA1D1C2509005BFF5A /* barCellTableViewCell.swift */; };
+		122033AE1D1C26BD005BFF5A /* barMenuViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033AD1D1C26BD005BFF5A /* barMenuViewViewController.swift */; };
+		122033B01D1C3122005BFF5A /* drinkMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033AF1D1C3122005BFF5A /* drinkMenuTableCell.swift */; };
+		122033B21D1C3783005BFF5A /* bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033B11D1C3783005BFF5A /* bar.swift */; };
+		122033B41D1C37ED005BFF5A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033B31D1C37ED005BFF5A /* Drink.swift */; };
 		12B859B71D107ACC00E883A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859B61D107ACC00E883A6 /* AppDelegate.swift */; };
 		12B859BC1D107ACC00E883A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BA1D107ACC00E883A6 /* Main.storyboard */; };
 		12B859BE1D107ACC00E883A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BD1D107ACC00E883A6 /* Assets.xcassets */; };
 		12B859C11D107ACC00E883A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BF1D107ACC00E883A6 /* LaunchScreen.storyboard */; };
 		12B859C91D107CC900E883A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B859C81D107CC900E883A6 /* GoogleService-Info.plist */; };
-		12B859CD1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */; };
 		12B859CF1D107EC100E883A6 /* customerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */; };
 		12B859D11D107EDA00E883A6 /* customerSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */; };
 		12B859D61D11D0D200E883A6 /* createUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D51D11D0D200E883A6 /* createUserProfileViewController.swift */; };
@@ -20,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		122033A81D1C24DD005BFF5A /* selectBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectBarTableViewController.swift; sourceTree = "<group>"; };
+		122033AA1D1C2509005BFF5A /* barCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = barCellTableViewCell.swift; path = BarMateCustomer/barCellTableViewCell.swift; sourceTree = "<group>"; };
+		122033AD1D1C26BD005BFF5A /* barMenuViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = barMenuViewViewController.swift; sourceTree = "<group>"; };
+		122033AF1D1C3122005BFF5A /* drinkMenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = drinkMenuTableCell.swift; path = BarMateCustomer/drinkMenuTableCell.swift; sourceTree = "<group>"; };
+		122033B11D1C3783005BFF5A /* bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bar.swift; sourceTree = "<group>"; };
+		122033B31D1C37ED005BFF5A /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		12B859B31D107ACC00E883A6 /* BarMateCustomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarMateCustomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B859B61D107ACC00E883A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B859BB1D107ACC00E883A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,7 +38,6 @@
 		12B859C01D107ACC00E883A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12B859C21D107ACC00E883A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BarMateCustomer/Info.plist; sourceTree = "<group>"; };
 		12B859C81D107CC900E883A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerDrinkOrderCollectionViewController.swift; sourceTree = "<group>"; };
 		12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerLoginViewController.swift; sourceTree = "<group>"; };
 		12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customerSignupViewController.swift; sourceTree = "<group>"; };
 		12B859D51D11D0D200E883A6 /* createUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createUserProfileViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +58,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122033AC1D1C2517005BFF5A /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				122033AA1D1C2509005BFF5A /* barCellTableViewCell.swift */,
+				122033AF1D1C3122005BFF5A /* drinkMenuTableCell.swift */,
+				122033B11D1C3783005BFF5A /* bar.swift */,
+				122033B31D1C37ED005BFF5A /* Drink.swift */,
+			);
+			name = objects;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		12B859AA1D107ACC00E883A6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +97,7 @@
 				12B859CB1D107DA700E883A6 /* storyboard */,
 				12B859CA1D107D9600E883A6 /* viewControllers */,
 				12B859BD1D107ACC00E883A6 /* Assets.xcassets */,
+				122033AC1D1C2517005BFF5A /* objects */,
 			);
 			path = BarMateCustomer;
 			sourceTree = "<group>";
@@ -82,10 +105,11 @@
 		12B859CA1D107D9600E883A6 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				12B859CC1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift */,
+				122033A81D1C24DD005BFF5A /* selectBarTableViewController.swift */,
 				12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */,
 				12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */,
 				12B859D51D11D0D200E883A6 /* createUserProfileViewController.swift */,
+				122033AD1D1C26BD005BFF5A /* barMenuViewViewController.swift */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -240,11 +264,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122033B21D1C3783005BFF5A /* bar.swift in Sources */,
+				122033B01D1C3122005BFF5A /* drinkMenuTableCell.swift in Sources */,
+				122033AE1D1C26BD005BFF5A /* barMenuViewViewController.swift in Sources */,
+				122033A91D1C24DD005BFF5A /* selectBarTableViewController.swift in Sources */,
 				12B859D11D107EDA00E883A6 /* customerSignupViewController.swift in Sources */,
 				12B859CF1D107EC100E883A6 /* customerLoginViewController.swift in Sources */,
-				12B859CD1D107E2500E883A6 /* customerDrinkOrderCollectionViewController.swift in Sources */,
 				12B859B71D107ACC00E883A6 /* AppDelegate.swift in Sources */,
 				12B859D61D11D0D200E883A6 /* createUserProfileViewController.swift in Sources */,
+				122033B41D1C37ED005BFF5A /* Drink.swift in Sources */,
+				122033AB1D1C2509005BFF5A /* barCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
