@@ -9,9 +9,10 @@
 import UIKit
 
 class drinkMenuTableCell: UITableViewCell {
-    @IBOutlet weak var drinkNameLabel: UILabel!
     @IBOutlet weak var drinkPriceLabel: UILabel!
-
+    @IBOutlet weak var drinkNameLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,10 +23,11 @@ class drinkMenuTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func configurMenuCell(drink:Drink){
+        
+    drinkNameLabel.text! = drink.name
+    drinkPriceLabel.text! = String(drink.price)
+    }
 }
-func configureCell(drink:Drink){
-   drinkNameLabel.text = drink.name
-    drinkPricelabel.text =
-}
+
 

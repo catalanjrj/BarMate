@@ -224,13 +224,6 @@ class OrderTableViewController: UITableViewController {
             
             self.ref.child("Orders").child("completed").child(order!.uid).updateChildValues(orderToMove)
           
-//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("uid").setValue(openOrders.uid)
-//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("user").setValue(openOrders.user)
-//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("drink").setValue(openOrders.drink)
-//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderTime").setValue(openOrders.orderTime)
-//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("image").setValue(openOrders.image)
-//        self.ref?.child("Orders").child("completed").child(openOrders.uid).child("orderId").setValue(openOrders.orderId)
-
 
         }
         completedButton.backgroundColor = UIColor.orangeColor()

@@ -11,7 +11,7 @@ import UIKit
 class Drink {
     var name = String()
     var image = String()
-    var ingredients = String ()
+    var ingredients = String()
     var price = Float()
     
     init() {
@@ -23,10 +23,10 @@ class Drink {
     }
     init(data:[String:AnyObject]){
         
-        name = String(data["name"])
-        image = String(data["image"])
-        ingredients = String(data["ingreditents"])
-        price = data["price"] as! Float
+        name = String(data["name"]!)
+        image = String(data["image"]!)
+        ingredients = String(data["ingredients"]!)
+        price = data["price"]! as! Float
         
         
 }

@@ -360,8 +360,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="barCellLabel" destination="ROm-pI-byk" id="Esv-3I-naa"/>
-                                    <segue destination="qmM-6W-ZKc" kind="show" id="lgT-5O-kOt"/>
+                                    <outlet property="barCellLabel" destination="ROm-pI-byk" id="Pj6-Ok-lQ3"/>
+                                    <segue destination="qmM-6W-ZKc" kind="show" identifier="barMenuSegue" id="lgT-5O-kOt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -392,7 +392,7 @@
                                 <rect key="frame" x="20" y="72" width="560" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barMenuCell" rowHeight="83" id="zCf-GH-kCj" customClass="drinkMenuTableCell" customModule="BarMateCustomer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkMenuTableCell" rowHeight="83" id="zCf-GH-kCj" customClass="drinkMenuTableCell" customModule="BarMateCustomer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="560" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zCf-GH-kCj" id="fiH-tk-6Tj">
@@ -422,8 +422,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="drinkNameLabel" destination="6AE-SN-gNA" id="TA2-Ha-v1z"/>
-                                            <outlet property="drinkPriceLabel" destination="4Bv-j9-osV" id="58J-iv-Ql9"/>
+                                            <outlet property="drinkNameLabel" destination="6AE-SN-gNA" id="ST6-tv-Eod"/>
+                                            <outlet property="drinkPriceLabel" destination="4Bv-j9-osV" id="gCf-Z4-ElA"/>
                                             <segue destination="9HT-wn-Rmb" kind="show" identifier="drinkDetailView" id="TN1-00-4R1"/>
                                         </connections>
                                     </tableViewCell>
@@ -450,10 +450,10 @@
             </objects>
             <point key="canvasLocation" x="46" y="903"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm Order View Controller-->
         <scene sceneID="JZs-xj-w59">
             <objects>
-                <viewController id="9HT-wn-Rmb" sceneMemberID="viewController">
+                <viewController id="9HT-wn-Rmb" customClass="confirmOrderViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="luy-hi-3TI"/>
                         <viewControllerLayoutGuide type="bottom" id="FQE-BP-flF"/>
@@ -487,12 +487,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price$$$$ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-Lu-fAX">
-                                <rect key="frame" x="257" y="431" width="86" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzm-Ng-G5c">
                                 <rect key="frame" x="232" y="498" width="136" height="44"/>
                                 <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -508,7 +502,16 @@
                                         <exclude reference="B0x-No-v4s"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="placeOrderButton:" destination="9HT-wn-Rmb" eventType="touchUpInside" id="TTh-zV-c6G"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price$$$$ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-Lu-fAX">
+                                <rect key="frame" x="257" y="431" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -539,6 +542,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="drinkImageView" destination="S4I-RR-dlh" id="fhR-xd-YTQ"/>
+                        <outlet property="drinkIngredients" destination="PqU-wn-C8R" id="vff-XI-ytC"/>
+                        <outlet property="drinkNameLabel" destination="HJS-Eh-QE9" id="ahO-sE-aPd"/>
+                        <outlet property="drinkPrice" destination="s6f-Lu-fAX" id="HV2-JE-po1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy7-xj-DBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

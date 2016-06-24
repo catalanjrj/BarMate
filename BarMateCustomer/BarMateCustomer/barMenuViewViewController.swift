@@ -30,22 +30,24 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        bars()
     }
     
     // retrive barMenus
     func bars(){
-        self.ref.child("Bars").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
+        self.ref.child("Bars").child("aowifjeafasg").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
             guard snapshot.value != nil else{
                 return
             }
             
-            for (key,value)in snapshot.value as! [String:AnyObject]{
+            for (key,value)in snapshot.value!["barMenu"] as! [String:AnyObject]{
                 
                 
                 self.barMenuArray.append(key)
-                
-                self.barMenuDict[key] = Drink(data: value as! [String : AnyObject])
+//                for(menuItemKey,MenuItemValue) in value["barMenu"] as! [String:AnyObject] {
+                    self.barMenuDict[key] = Drink(data: value as! [String:AnyObject])
+          
+              //  }
             }
             
             dispatch_async(dispatch_get_main_queue(), {self.barMenuTableView.reloadData()})
@@ -63,27 +65,46 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return barMenuArray.count
     }
     
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("barMenuCell", forIndexPath: indexPath)as! drinkMenuTableCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("drinkMenuTableCell", forIndexPath: indexPath)as! drinkMenuTableCell
+        let label = barMenuArray[indexPath.row]
+        let bar = barMenuDict[label]
         
-        // Configure the cell...
         
+       cell.configurMenuCell(bar!)
+        
+
+        
+    
         return cell
     }
-    
 
-    /*
-    // MARK: - Navigation
+
+
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "drinkDetailView"{
+            if let indexPath = self.barMenuTableView.indexPathForSelectedRow{
+                let object = barMenuArray[indexPath.row]
+                
+     
+                
+            let destinationViewController = segue.destinationViewController as! confirmOrderViewController
+            
+                destinationViewController.drink = barMenuDict[object]
+            }
+            
+            
+            
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+  
 
 }

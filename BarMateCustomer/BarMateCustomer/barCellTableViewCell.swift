@@ -23,7 +23,7 @@ class barCellTableViewCell: UITableViewCell {
         
     }
     func configureCell(bar:Bar){
-        barCellLabel.text = bar.barName
+        barCellLabel!.text! = bar.barName
     
     }
 }
