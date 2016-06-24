@@ -9,7 +9,7 @@
 import UIKit
 
 class barCellTableViewCell: UITableViewCell {
-    @IBOutlet weak var barCell: UILabel!
+    @IBOutlet weak var barCellLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +20,10 @@ class barCellTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
     }
-
+    func configureCell(bar:Bar){
+        barCellLabel.text = bar.barName
+    
+    }
 }

@@ -360,7 +360,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="barCell" destination="ROm-pI-byk" id="Rfk-kR-HXo"/>
+                                    <outlet property="barCellLabel" destination="ROm-pI-byk" id="Esv-3I-naa"/>
                                     <segue destination="qmM-6W-ZKc" kind="show" id="lgT-5O-kOt"/>
                                 </connections>
                             </tableViewCell>
@@ -422,6 +422,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="drinkNameLabel" destination="6AE-SN-gNA" id="TA2-Ha-v1z"/>
+                                            <outlet property="drinkPriceLabel" destination="4Bv-j9-osV" id="58J-iv-Ql9"/>
                                             <segue destination="9HT-wn-Rmb" kind="show" identifier="drinkDetailView" id="TN1-00-4R1"/>
                                         </connections>
                                     </tableViewCell>

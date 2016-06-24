@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var barMenuTableView: UITableView!
+    
+    var ref : FIRDatabaseReference = FIRDatabase.database().reference()
+    var barMenuArray = [String]()
+    var barMenuDict = [String:Drink]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +23,35 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.ref.removeAllObservers()
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    // retrive barMenus
+    func bars(){
+        self.ref.child("Bars").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
+            guard snapshot.value != nil else{
+                return
+            }
+            
+            for (key,value)in snapshot.value as! [String:AnyObject]{
+                
+                
+                self.barMenuArray.append(key)
+                
+                self.barMenuDict[key] = Drink(data: value as! [String : AnyObject])
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), {self.barMenuTableView.reloadData()})
+            
+        })
+        
     }
     
     // MARK: - Table view data source

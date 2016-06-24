@@ -19,7 +19,7 @@ class Bar  {
         
         barName = String(orderData["barName"]!)
         for (_,value) in (orderData["barMenu"] as? [String:AnyObject])!{
-            barMenu.append(Drink(data: value as! [String : AnyObject]))
+        barMenu.append(Drink(data: value as! [String : AnyObject]))
          }
         
     }

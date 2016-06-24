@@ -62,9 +62,9 @@ class OrderTableViewController: UITableViewController {
             
         })
         self.ref.child("Orders/open/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildRemoved, withBlock: {(snapshot) in
-            self.openOrderDict.removeValueForKey(snapshot.key)
+            self.completedOrderDict.removeValueForKey(snapshot.key)
             let  openIndex =  self.openOrderArray.indexOf(snapshot.key)
-            self.openOrderArray.removeAtIndex(openIndex!)
+            self.completedOrderArray.removeAtIndex(openIndex!)
             
             dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
             
