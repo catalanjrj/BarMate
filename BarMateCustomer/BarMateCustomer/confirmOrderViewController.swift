@@ -58,7 +58,7 @@ class confirmOrderViewController: UIViewController {
         var newOrderDict:[String:AnyObject] = ["drink":(drink?.name)!]
         newOrderDict["uid"] = newChild.key
         newOrderDict["orderTime"] = dateFormatter.stringFromDate(NSDate())
-        newOrderDict["user"] = String(FIRAuth.auth()!.currentUser!.uid)
+        newOrderDict["user"] = String(FIRAuth.auth()!.currentUser!.email!)
         newOrderDict["orderId"] = newChild.key
         newOrderDict["bar"] = bar.key
         

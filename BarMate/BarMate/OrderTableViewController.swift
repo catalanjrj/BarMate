@@ -30,6 +30,10 @@ class OrderTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        openOrders()
+        completedOrders()
+        fulfilledOrders()
+
         //  let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
        // self.navigationItem.rightBarButtonItem = addButton
     }
@@ -42,10 +46,7 @@ class OrderTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        openOrders()
-        completedOrders()
-        fulfilledOrders()
-    }
+            }
     
     func openOrders(){
         self.ref.child("Orders/open/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildAdded, withBlock: {(snapshot) in
@@ -218,7 +219,7 @@ class OrderTableViewController: UITableViewController {
 //            guard let uid = openOrders.uid, let user = openOrders.user, let drink = openOrders.drink, let image = openOrders.image, let orderTime = openOrders.orderTime, let orderId = openOrders.orderId else {return}
             
             self.ref.child("Orders").child("open").child(order!.uid).removeValue()
-            //self.ref?.child("Orders").child("fulfilled").child(fulfilledOrders.uid).removeValue()
+            //self.ref?.child("Orders").child("fulfilled").chilsd(fulfilledOrders.uid).removeValue()
             
             let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
@@ -243,7 +244,7 @@ class OrderTableViewController: UITableViewController {
      }
         fulfilled.backgroundColor = UIColor.grayColor()
     
-    return [ completedButton, fulfilled]
+    return [completedButton, fulfilled]
     }
     
     
@@ -252,14 +253,14 @@ override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:
         return true
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-     if editingStyle == .Delete {
-          label.removeAtIndex(indexPath.row)
-           tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//     if editingStyle == .Delete {
+//          label.removeAtIndex(indexPath.row)
+//           tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//        } else if editingStyle == .Insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//        }
+//    }
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -274,6 +275,9 @@ override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:
         default:
             return "You should not be seeing this!"
         }
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
 

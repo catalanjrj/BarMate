@@ -18,7 +18,8 @@ class BarSignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    // make button round
+        CreateAccountButton.layer.cornerRadius = 8
         EmailTextField.text = ""
         PasswordTextField.text = ""
         

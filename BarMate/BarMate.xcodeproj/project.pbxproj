@@ -10,6 +10,7 @@
 		1201584E1D12E2F400055BA5 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201584D1D12E2F400055BA5 /* Drink.swift */; };
 		120158501D12E35A00055BA5 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201584F1D12E35A00055BA5 /* Bar.swift */; };
 		120158521D12ED2D00055BA5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120158511D12ED2D00055BA5 /* Order.swift */; };
+		1209EB661D2060480031A64D /* signUpPhoto.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1209EB651D2060480031A64D /* signUpPhoto.jpeg */; };
 		122033A71D1880FC005BFF5A /* orderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033A61D1880FC005BFF5A /* orderCell.swift */; };
 		12B859851D0B02C000E883A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859841D0B02C000E883A6 /* AppDelegate.swift */; };
 		12B859871D0B02C000E883A6 /* BarSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */; };
@@ -29,6 +30,7 @@
 		1201584D1D12E2F400055BA5 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		1201584F1D12E35A00055BA5 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		120158511D12ED2D00055BA5 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		1209EB651D2060480031A64D /* signUpPhoto.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signUpPhoto.jpeg; sourceTree = "<group>"; };
 		122033A61D1880FC005BFF5A /* orderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderCell.swift; sourceTree = "<group>"; };
 		12B859811D0B02C000E883A6 /* BarMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B859841D0B02C000E883A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		12B859781D0B02C000E883A6 = {
 			isa = PBXGroup;
 			children = (
+				1209EB651D2060480031A64D /* signUpPhoto.jpeg */,
 				12B859A41D10770B00E883A6 /* possibleBackground1.jpg */,
 				12B859A61D10772500E883A6 /* possibleBackground1.jpg */,
 				12B8599E1D0B296F00E883A6 /* GoogleService-Info.plist */,
@@ -208,6 +211,7 @@
 				12B8599F1D0B296F00E883A6 /* GoogleService-Info.plist in Resources */,
 				12B859A71D10772500E883A6 /* possibleBackground1.jpg in Resources */,
 				12B859A51D10770B00E883A6 /* possibleBackground1.jpg in Resources */,
+				1209EB661D2060480031A64D /* signUpPhoto.jpeg in Resources */,
 				12B8598C1D0B02C000E883A6 /* Assets.xcassets in Resources */,
 				12B8598A1D0B02C000E883A6 /* Main.storyboard in Resources */,
 			);
@@ -394,6 +398,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Catalan.BarMate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -406,6 +411,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Catalan.BarMate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

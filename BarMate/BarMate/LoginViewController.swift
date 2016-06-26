@@ -13,9 +13,15 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // make buttons round 
+        self.loginButton.layer.cornerRadius = 8
+        
+        
         self.hideKeyboardWhenTappedAround()
         
         FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) in
