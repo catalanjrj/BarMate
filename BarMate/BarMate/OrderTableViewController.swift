@@ -220,7 +220,7 @@ class OrderTableViewController: UITableViewController {
             self.ref.child("Orders").child("open").child(order!.uid).removeValue()
             //self.ref?.child("Orders").child("fulfilled").child(fulfilledOrders.uid).removeValue()
             
-            let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime, "image": order!.image, "orderId": order!.orderId, "bar":"aowifjeafasg"]
+            let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
             self.ref.child("Orders").child("completed").child(order!.uid).updateChildValues(orderToMove)
           
@@ -236,7 +236,7 @@ class OrderTableViewController: UITableViewController {
             
                  self.ref.child("Orders").child("completed").child(order!.uid).removeValue()
             
-                 let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime, "image": order!.image, "orderId": order!.orderId, "bar":"aowifjeafasg"]
+                 let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
             self.ref.child("Orders").child("fulfilled").child(order!.uid).updateChildValues(orderToMove)
          
@@ -360,5 +360,4 @@ override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:
         // Pass the selected object to the new view controller.
     }
     */
-
-}
+   }

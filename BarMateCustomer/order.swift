@@ -16,6 +16,7 @@ class Order{
     var image: String?
     var orderId: String
     var uid: String
+    var bar: String
     
     init(orderData:[String:AnyObject]){
         
@@ -26,6 +27,7 @@ class Order{
         image = String(orderData["image"])
         orderId = String(orderData["orderId"]!)
         uid = String(orderData["uid"]!)
+        bar = String(orderData["bar"]!)
         
         
         

@@ -48,6 +48,7 @@ class confirmOrderViewController: UIViewController {
     //set up button for placing orders
     @IBAction func placeOrderButton(sender: AnyObject) {
       let newChild = self.ref.child("Orders").child("open").childByAutoId()
+        let bar = self.ref.child("Bars").child("aowifjeafasg")
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .ShortStyle
@@ -57,8 +58,10 @@ class confirmOrderViewController: UIViewController {
         var newOrderDict:[String:AnyObject] = ["drink":(drink?.name)!]
         newOrderDict["uid"] = newChild.key
         newOrderDict["orderTime"] = dateFormatter.stringFromDate(NSDate())
-        newOrderDict["user"] = String(FIRAuth.auth()?.currentUser?.uid)
+        newOrderDict["user"] = String(FIRAuth.auth()!.currentUser!.uid)
         newOrderDict["orderId"] = newChild.key
+        newOrderDict["bar"] = bar.key
+        
   
         
 

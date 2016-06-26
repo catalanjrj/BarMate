@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) in
             if user != nil {
@@ -69,25 +70,16 @@ try! FIRAuth.auth()!.signOut()
     @IBOutlet weak var signUpButton: UIButton!
     
 }
-
-extension String
-{
-    func toDateTime() -> NSDate
-    {
-        //Create Date Formatter
-        let dateFormatter = NSDateFormatter()
-        
-        //Specify Format of String to Parse
-        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss.SSSSxxx"
-        
-        //Parse into NSDate
-        let dateFromString : NSDate = dateFormatter.dateFromString(self)!
-        
-        //Return Parsed Date
-        return dateFromString
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+
+
 }
-
-
-
-

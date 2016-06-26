@@ -14,7 +14,7 @@ class Order{
     var user: String
     var drink: String
     var orderTime: String
-    var image: String
+
     var orderId: String
     var uid: String
     
@@ -24,7 +24,7 @@ class Order{
         drink = String(orderData["drink"]!)
         orderTime = String(orderData["orderTime"]!)
         user = String(orderData["user"]!)
-        image = String(orderData["image"]!)
+
        orderId = String(orderData["orderId"]!)
         uid = String(orderData["uid"]!)
         
