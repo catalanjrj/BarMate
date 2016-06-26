@@ -114,8 +114,8 @@
 				12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */,
 				12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */,
 				12B859D51D11D0D200E883A6 /* createUserProfileViewController.swift */,
-				122033AD1D1C26BD005BFF5A /* barMenuViewViewController.swift */,
 				122033B71D1D9F9B005BFF5A /* confirmOrderViewController.swift */,
+				122033AD1D1C26BD005BFF5A /* barMenuViewViewController.swift */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";

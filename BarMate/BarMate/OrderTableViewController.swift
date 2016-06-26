@@ -171,7 +171,7 @@ class OrderTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath) as! orderCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath) as! orderCell
         
 
         switch indexPath.section{
@@ -184,8 +184,8 @@ class OrderTableViewController: UITableViewController {
             cell.drinkLabel.text! = order!.drink
             cell.orderTimeLabel.text =  order!.orderTime
         case 1:
-     let label = completedOrderArray[indexPath.row]
-     let order = completedOrderDict[label]
+            let label = completedOrderArray[indexPath.row]
+            let order = completedOrderDict[label]
             cell.userLabel?.text = order!.user
             cell.drinkLabel.text = order!.drink
             cell.orderTimeLabel.text = order!.orderTime
@@ -216,10 +216,10 @@ class OrderTableViewController: UITableViewController {
            let openOrders = self.openOrderArray[indexPath.row]
             let order = self.openOrderDict[openOrders]
             
-//            guard let uid = openOrders.uid, let user = openOrders.user, let drink = openOrders.drink, let image = openOrders.image, let orderTime = openOrders.orderTime, let orderId = openOrders.orderId else {return}
+
             
             self.ref.child("Orders").child("open").child(order!.uid).removeValue()
-            //self.ref?.child("Orders").child("fulfilled").chilsd(fulfilledOrders.uid).removeValue()
+ 
             
             let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
@@ -253,14 +253,7 @@ override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:
         return true
     }
     
-//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//     if editingStyle == .Delete {
-//          label.removeAtIndex(indexPath.row)
-//           tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//        } else if editingStyle == .Insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//        }
-//    }
+
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -276,6 +269,7 @@ override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:
             return "You should not be seeing this!"
         }
     }
+    // make tableView cell Deselect after tapped
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
@@ -283,85 +277,5 @@ override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath:
 
     
 
-//move data between buckets when item is tapped and confirmed 
 
-
-
-
-
-
-
-//method is called when a button in the UI is clicked/tapped.
-//@IBAction func itemsBoughtACTION(sender: AnyObject) {
-//    
-//    let rootRef = Firebase(url:"https://your-Firebase.firebaseio.com")
-//    
-//    let groceryRef = rootRef.childByAppendingPath("groceryLists")
-//    
-//    //get each child node of groceryRef where completed == true
-//    groceryRef.queryOrderedByChild("completed").queryEqualToValue(true)
-//        .observeEventType(.ChildAdded, withBlock: { snapshot in
-//            
-//            //set up a history node and write the snapshot.value to it
-//            // using the key as the node name and the value as the value.
-//            let historyNode = rootRef.childByAppendingPath("history")
-//            let thisHistoryNode = historyNode.childByAppendingPath(snapshot.key)
-//            thisHistoryNode.setValue(snapshot.value) //write to the new node
-//            
-//            //get a reference to the data we just read and remove it
-//            let nodeToRemove = groceryRef.childByAppendingPath(snapshot.key)
-//            nodeToRemove.removeValue();
-//            
-//        })
-//    
-//}
-
-
-
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
    }

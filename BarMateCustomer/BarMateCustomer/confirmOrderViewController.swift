@@ -70,7 +70,7 @@ class confirmOrderViewController: UIViewController {
 //       let childUpdates = ["/posts/\(key)": post,
 //                          "/user-posts/\(userID)/\(key)/": post]
 //       ref.updateChildValues(childUpdates)
-         let newOrder = Order(orderData: newOrderDict)
+         _ = Order(orderData: newOrderDict)
         newChild.updateChildValues(newOrderDict)
         
     }
