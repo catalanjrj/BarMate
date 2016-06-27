@@ -47,35 +47,46 @@ class confirmOrderViewController: UIViewController {
     
     //set up button for placing orders
     @IBAction func placeOrderButton(sender: AnyObject) {
-      let newChild = self.ref.child("Orders").child("open").childByAutoId()
-        let bar = self.ref.child("Bars").child("aowifjeafasg")
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeStyle = .ShortStyle
-        dateFormatter.dateStyle = . ShortStyle
-       
+        //confirm that user wants to order
+        let alertController = UIAlertController(title:"Confirm Order", message:"Are You Sure?", preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title:"Cancel", style:.Cancel){(action) in
+        }
+        //add cancel action to alert controller
+        alertController.addAction(cancelAction)
         
-      
-        var newOrderDict:[String:AnyObject] = ["drink":(drink?.name)!]
-        newOrderDict["uid"] = newChild.key
-        newOrderDict["orderTime"] = dateFormatter.stringFromDate(NSDate())
-        newOrderDict["user"] = String(FIRAuth.auth()!.currentUser!.email!)
-        newOrderDict["orderId"] = newChild.key
-        newOrderDict["bar"] = bar.key
+        //create ok alert action
+        let OkAction = UIAlertAction(title:"Order", style: .Default){(action) in
+            
+            //create order and pass to firebase
+            let newChild = self.ref.child("Orders").child("open").childByAutoId()
+            let bar = self.ref.child("Bars").child("aowifjeafasg")
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeStyle = .ShortStyle
+            dateFormatter.dateStyle = . ShortStyle
+            
+            
+            
+            var newOrderDict:[String:AnyObject] = ["drink":(self.drink?.name)!]
+            newOrderDict["uid"] = newChild.key
+            newOrderDict["orderTime"] = dateFormatter.stringFromDate(NSDate())
+            newOrderDict["user"] = String(FIRAuth.auth()!.currentUser!.email!)
+            newOrderDict["orderId"] = newChild.key
+            newOrderDict["bar"] = bar.key
+            
+            _ = Order(orderData: newOrderDict)
+            newChild.updateChildValues(newOrderDict)
+            
+        }
         
-  
+        //add ok action to alert controller
+        alertController.addAction(OkAction)
         
-
+        // present alert action controller
+        self.presentViewController(alertController, animated: true){}
     
-//
-//       let childUpdates = ["/posts/\(key)": post,
-//                          "/user-posts/\(userID)/\(key)/": post]
-//       ref.updateChildValues(childUpdates)
-         _ = Order(orderData: newOrderDict)
-        newChild.updateChildValues(newOrderDict)
-        
-    }
     
     
-    
+}
 }
