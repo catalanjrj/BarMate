@@ -474,7 +474,7 @@
                             <constraint firstItem="SKH-yc-wUM" firstAttribute="leading" secondItem="99X-A3-e8i" secondAttribute="leadingMargin" constant="-20" id="veB-ep-Kgg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" id="pxU-F8-7c7">
+                    <navigationItem key="navigationItem" title="Drinks" id="pxU-F8-7c7">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="L50-f5-To9">
                             <connections>
                                 <segue destination="v3D-IJ-64b" kind="unwind" unwindAction="unwindToLoginViewController:" id="ne0-SA-DVc"/>

@@ -10,7 +10,14 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 import FirebaseAuth
+
+
+
+
 class OrderTableViewController: UITableViewController {
+    
+    
+
     // labels
     
     var label = [Order]()
@@ -57,6 +64,8 @@ class OrderTableViewController: UITableViewController {
             self.openOrderArray.append(snapshot.key)
             
             self.openOrderDict[snapshot.key] = Order(orderData: snapshot.value as! [String : AnyObject])
+            
+            
             
             
             dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
@@ -122,30 +131,9 @@ class OrderTableViewController: UITableViewController {
                     
                 })
             }
-    
 
     
 
-    
- 
-    
-            
-       
-    
-//    func insertNewObject(sender: AnyObject) {
-//        
-//        
-//      
-//      
-//        objects.insert(uniqueString, atIndex: 0)
-//        let  wordList = self.ref?.child("Users/Jorge/username").childByAutoId()
-//        wordList?.setValue(uniqueString)
-//        
-//        
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0 )
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//        
-//    }
 
 
     
@@ -210,42 +198,101 @@ class OrderTableViewController: UITableViewController {
     }
     
  override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+    switch indexPath.section {
+    case 0:
         let completedButton = UITableViewRowAction(style: .Normal, title: "completed") { action, index in
             print("completed button tapped")
             
-           let openOrders = self.openOrderArray[indexPath.row]
+            let openOrders = self.openOrderArray[indexPath.row]
             let order = self.openOrderDict[openOrders]
             
-
+            
             
             self.ref.child("Orders").child("open").child(order!.uid).removeValue()
- 
+            
             
             let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
             self.ref.child("Orders").child("completed").child(order!.uid).updateChildValues(orderToMove)
-          
-
+            
+            
         }
         completedButton.backgroundColor = UIColor.orangeColor()
-    
+        
+        return [completedButton]
+    case 1:
         let fulfilled = UITableViewRowAction(style: .Normal, title: "fulfilled") { action, index in
             print("fulfilled button tapped")
             
-              let completedOrders = self.completedOrderArray[index.row]
-              let order = self.completedOrderDict[completedOrders]
+            let completedOrders = self.completedOrderArray[index.row]
+            let order = self.completedOrderDict[completedOrders]
             
-                 self.ref.child("Orders").child("completed").child(order!.uid).removeValue()
+            self.ref.child("Orders").child("completed").child(order!.uid).removeValue()
             
-                 let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
+            let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
             
             self.ref.child("Orders").child("fulfilled").child(order!.uid).updateChildValues(orderToMove)
-         
-     }
+            
+        }
         fulfilled.backgroundColor = UIColor.grayColor()
-    
-    return [completedButton, fulfilled]
+        
+        return [fulfilled]
+    case 2:
+        
+        let delete = UITableViewRowAction(style: .Normal, title: "Delete"){
+            action, index in
+            print("deleted")
+            let fulfilled = self.fulfilledOrderArray[index.row]
+            let order = self.fulfilledOrderDict[fulfilled]
+        
+               self.ref.child("Orders").child("fulfilled").child(order!.uid).removeValue()
+        }
+        delete.backgroundColor = UIColor.redColor()
+        
+        return [delete]
+        
+        
+    default:
+          return nil
     }
+        }
+    
+//    
+//        let completedButton = UITableViewRowAction(style: .Normal, title: "completed") { action, index in
+//            print("completed button tapped")
+//            
+//           let openOrders = self.openOrderArray[indexPath.row]
+//            let order = self.openOrderDict[openOrders]
+//            
+//
+//            
+//            self.ref.child("Orders").child("open").child(order!.uid).removeValue()
+// 
+//            
+//            let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
+//            
+//            self.ref.child("Orders").child("completed").child(order!.uid).updateChildValues(orderToMove)
+//          
+//
+//        }
+//        completedButton.backgroundColor = UIColor.orangeColor()
+    
+//        let fulfilled = UITableViewRowAction(style: .Normal, title: "fulfilled") { action, index in
+//            print("fulfilled button tapped")
+//            
+//              let completedOrders = self.completedOrderArray[index.row]
+//              let order = self.completedOrderDict[completedOrders]
+//            
+//                 self.ref.child("Orders").child("completed").child(order!.uid).removeValue()
+//            
+//                 let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
+//            
+//            self.ref.child("Orders").child("fulfilled").child(order!.uid).updateChildValues(orderToMove)
+//         
+//     }
+//        fulfilled.backgroundColor = UIColor.grayColor()
+//    
+
     
     
 override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

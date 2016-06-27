@@ -26,15 +26,10 @@ class confirmOrderViewController: UIViewController {
                 drinkNameLabel.text = detail.name
                 drinkPrice.text = String(detail.price)
                 drinkIngredients.text = detail.ingredients
-        
-            
-     
+    
             }
             
         }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +39,7 @@ class confirmOrderViewController: UIViewController {
         drinkPrice.text = String(format:"$%.2f", drink!.price)
         drinkIngredients.text = drink!.ingredients
     }
-    
+
     //set up button for placing orders
     @IBAction func placeOrderButton(sender: AnyObject) {
         
@@ -78,8 +73,13 @@ class confirmOrderViewController: UIViewController {
             _ = Order(orderData: newOrderDict)
             newChild.updateChildValues(newOrderDict)
             
+            //success alert!
+            let successAlert = UIAlertController(title:"",message:"Success!", preferredStyle: .Alert)
+            let OkAction = UIAlertAction(title:"Ok", style: .Default){(action) in
+            }
+            successAlert.addAction(OkAction)
+            self.presentViewController(successAlert,animated:true){}
         }
-        
         //add ok action to alert controller
         alertController.addAction(OkAction)
         
