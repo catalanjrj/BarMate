@@ -346,16 +346,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-pI-byk">
-                                            <rect key="frame" x="130" y="14" width="84" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-pI-byk">
+                                            <rect key="frame" x="130" y="8" width="161" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ROm-pI-byk" firstAttribute="bottom" secondItem="GLh-tg-ICY" secondAttribute="bottomMargin" id="ELE-K9-XxR"/>
-                                        <constraint firstItem="ROm-pI-byk" firstAttribute="top" secondItem="GLh-tg-ICY" secondAttribute="topMargin" constant="6" id="cdM-cW-8Vx"/>
+                                        <constraint firstItem="ROm-pI-byk" firstAttribute="top" secondItem="GLh-tg-ICY" secondAttribute="topMargin" id="cdM-cW-8Vx"/>
                                         <constraint firstItem="ROm-pI-byk" firstAttribute="leading" secondItem="GLh-tg-ICY" secondAttribute="leadingMargin" constant="122" id="xOv-V3-iyp"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -433,17 +433,29 @@
                                     <outlet property="delegate" destination="qmM-6W-ZKc" id="i7D-Ps-vXt"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9V7-qh-7rZ">
+                                <rect key="frame" x="203" y="544" width="194" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="SB2-G0-9QF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="42"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="w8g-DP-0GD" firstAttribute="top" secondItem="9V7-qh-7rZ" secondAttribute="bottom" constant="7" id="JcM-05-QVx"/>
                             <constraint firstItem="SKH-yc-wUM" firstAttribute="centerY" secondItem="99X-A3-e8i" secondAttribute="centerY" id="POX-Lw-OXj"/>
                             <constraint firstItem="SKH-yc-wUM" firstAttribute="centerX" secondItem="99X-A3-e8i" secondAttribute="centerX" id="ZQq-8z-1NQ"/>
                             <constraint firstItem="SKH-yc-wUM" firstAttribute="top" secondItem="Dsg-IS-H8N" secondAttribute="bottom" constant="8" symbolic="YES" id="fg3-dF-9M3"/>
+                            <constraint firstItem="9V7-qh-7rZ" firstAttribute="centerX" secondItem="SKH-yc-wUM" secondAttribute="centerX" id="lpB-vr-dXB"/>
                             <constraint firstItem="SKH-yc-wUM" firstAttribute="leading" secondItem="99X-A3-e8i" secondAttribute="leadingMargin" id="veB-ep-Kgg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="barMenuTableView" destination="SKH-yc-wUM" id="U35-VR-Yuh"/>
+                        <outlet property="barNameLabel" destination="9V7-qh-7rZ" id="8q6-5O-hnL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4c-tm-khg" userLabel="First Responder" sceneMemberID="firstResponder"/>

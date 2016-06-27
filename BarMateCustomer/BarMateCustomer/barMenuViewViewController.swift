@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var barMenuTableView: UITableView!
+    @IBOutlet weak var barNameLabel: UILabel!
     
     var ref : FIRDatabaseReference = FIRDatabase.database().reference()
     var barMenuArray = [String]()
@@ -19,6 +20,7 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -31,6 +33,7 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         bars()
+    
     }
     
     // retrive barMenus
@@ -104,6 +107,10 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+    func barNameLabel(bar:Bar){
+    barNameLabel.text = bar.barName
+    
     }
   
 
