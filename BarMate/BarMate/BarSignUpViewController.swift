@@ -91,10 +91,7 @@ class BarSignUpViewController: UIViewController {
     @IBAction func CancelButton(sender: AnyObject) {
    dismissViewControllerAnimated(true, completion: nil)
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        <#code#>
-//    }
-    
+
         
     }
 

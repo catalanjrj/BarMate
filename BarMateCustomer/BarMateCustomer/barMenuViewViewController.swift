@@ -42,7 +42,8 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
             guard snapshot.value != nil else{
                 return
             }
-            
+            self.barMenuArray = [String]()
+            self.barMenuDict = [String:Drink]()
             for (key,value)in snapshot.value!["barMenu"] as! [String:AnyObject]{
                 
                 

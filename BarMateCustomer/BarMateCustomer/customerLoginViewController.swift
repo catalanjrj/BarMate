@@ -12,6 +12,7 @@ import Firebase
 class customerLoginViewController: UIViewController {
     @IBOutlet weak var customerEmailTextField: UITextField!
     @IBOutlet weak var customerPasswordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
 // Create and Set Up buttons
     @IBAction func customerLoginButton(sender: AnyObject) {
@@ -48,16 +49,33 @@ class customerLoginViewController: UIViewController {
             
         })
     }
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+        try! FIRAuth.auth()!.signOut()
+        
+    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //make button round 
+        loginButton.layer.cornerRadius = 8
+        
+    
         self.hideKeyboardWhenTappedAround()
+        
+        // check to see if user already loggin to skip login screen 
+        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) in
+            if user != nil {
+                self.performSegueWithIdentifier("barSegue", sender: nil)
+            }
+        })
+    }
+    
         }
 
         // Do any additional setup after loading the view.
-    }
+
 
 
 

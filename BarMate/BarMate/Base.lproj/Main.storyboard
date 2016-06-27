@@ -46,7 +46,7 @@
                             </label>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obp-C7-bbs">
                                 <rect key="frame" x="229" y="394" width="143" height="45"/>
-                                <color key="backgroundColor" red="0.3490216973965351" green="0.41011712616199641" blue="0.53894822140957444" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.34901960784313724" green="0.40784313725490196" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="bO9-lZ-RX6"/>
@@ -190,7 +190,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Orders" id="hcw-SW-NOz">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="W7w-hc-o8P">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="W7w-hc-o8P">
                             <connections>
                                 <segue destination="h0c-FZ-NRU" kind="unwind" unwindAction="unwindToLoginViewController:" id="ruQ-CZ-f4K"/>
                             </connections>
@@ -201,7 +201,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYZ-JA-NSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="h0c-FZ-NRU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="231" y="1000"/>
+            <point key="canvasLocation" x="130" y="977"/>
         </scene>
         <!--BarSignUpViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -303,7 +303,7 @@
                         <color key="backgroundColor" red="0.075505344476372596" green="0.1184784961435013" blue="0.1972032912234043" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Rwp-pp-Zrt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3VB-gl-bMK"/>
-                            <constraint firstItem="9I6-qe-4af" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="107" id="6Sd-59-Ibb"/>
+                            <constraint firstItem="9I6-qe-4af" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="87" id="6Sd-59-Ibb"/>
                             <constraint firstItem="7Fm-am-qQn" firstAttribute="leading" secondItem="KAa-72-HRc" secondAttribute="leading" id="8La-JG-xJ5"/>
                             <constraint firstItem="KAa-72-HRc" firstAttribute="leading" secondItem="b0m-T3-Zqb" secondAttribute="leading" id="Bnp-V5-xnS"/>
                             <constraint firstItem="9I6-qe-4af" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E17-Zs-CVA"/>
@@ -317,7 +317,7 @@
                             <constraint firstItem="9I6-qe-4af" firstAttribute="centerX" secondItem="KAa-72-HRc" secondAttribute="centerX" id="er2-jA-Rzy"/>
                             <constraint firstItem="7Fm-am-qQn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gyY-WP-0Y5"/>
                             <constraint firstItem="Rwp-pp-Zrt" firstAttribute="centerX" secondItem="38e-7d-MJn" secondAttribute="centerX" id="hjD-JX-rfk"/>
-                            <constraint firstItem="7Fm-am-qQn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="220" id="j1g-oO-wKX"/>
+                            <constraint firstItem="7Fm-am-qQn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="j1g-oO-wKX"/>
                             <constraint firstItem="KAa-72-HRc" firstAttribute="top" secondItem="7Fm-am-qQn" secondAttribute="bottom" constant="8" symbolic="YES" id="m3S-PL-Wmh"/>
                             <constraint firstItem="GHj-lX-t0c" firstAttribute="top" secondItem="9I6-qe-4af" secondAttribute="bottom" constant="8" id="qNR-f7-bDD"/>
                             <constraint firstItem="9I6-qe-4af" firstAttribute="centerX" secondItem="mvH-zQ-ZR7" secondAttribute="centerX" id="qSc-hZ-e65"/>
@@ -362,25 +362,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utj-Sy-RvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-403" y="1000"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="FFv-Rb-0KW">
-            <objects>
-                <viewController id="bOd-eF-O5h" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Ir-V3-aRX"/>
-                        <viewControllerLayoutGuide type="bottom" id="fX5-p0-1em"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uyR-gQ-Igt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gn4-vL-RpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1092" y="1711"/>
+            <point key="canvasLocation" x="-548" y="977"/>
         </scene>
     </scenes>
     <resources>

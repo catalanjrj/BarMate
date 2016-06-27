@@ -41,7 +41,7 @@ class confirmOrderViewController: UIViewController {
         
 
         drinkNameLabel.text = drink!.name
-        drinkPrice.text = String(drink!.price)
+        drinkPrice.text = String(format:"$%.2f", drink!.price)
         drinkIngredients.text = drink!.ingredients
     }
     
@@ -51,8 +51,9 @@ class confirmOrderViewController: UIViewController {
         let bar = self.ref.child("Bars").child("aowifjeafasg")
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .ShortStyle
-        dateFormatter.timeStyle = .MediumStyle
+        dateFormatter.timeStyle = .ShortStyle
+        dateFormatter.dateStyle = . ShortStyle
+       
         
       
         var newOrderDict:[String:AnyObject] = ["drink":(drink?.name)!]

@@ -38,7 +38,8 @@ class selectBarTableViewController: UITableViewController {
                 guard snapshot.value != nil else{
                     return
                 }
-                
+                self.barsArray = [String]()
+                self.barsDict = [String:Bar]()
                 for (key,value)in snapshot.value as! [String:AnyObject]{
                 
                 

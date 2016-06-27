@@ -15,6 +15,8 @@
 		122033B41D1C37ED005BFF5A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033B31D1C37ED005BFF5A /* Drink.swift */; };
 		122033B81D1D9F9B005BFF5A /* confirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033B71D1D9F9B005BFF5A /* confirmOrderViewController.swift */; };
 		122033BA1D1DB96D005BFF5A /* order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033B91D1DB96D005BFF5A /* order.swift */; };
+		1259602B1D216C49008487F4 /* possibleBackground1 copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 125960291D216C49008487F4 /* possibleBackground1 copy.jpg */; };
+		1259602C1D216C49008487F4 /* signUpPhoto copy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1259602A1D216C49008487F4 /* signUpPhoto copy.jpeg */; };
 		12B859B71D107ACC00E883A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859B61D107ACC00E883A6 /* AppDelegate.swift */; };
 		12B859BC1D107ACC00E883A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BA1D107ACC00E883A6 /* Main.storyboard */; };
 		12B859BE1D107ACC00E883A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B859BD1D107ACC00E883A6 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		122033B31D1C37ED005BFF5A /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		122033B71D1D9F9B005BFF5A /* confirmOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmOrderViewController.swift; sourceTree = "<group>"; };
 		122033B91D1DB96D005BFF5A /* order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = order.swift; sourceTree = "<group>"; };
+		125960291D216C49008487F4 /* possibleBackground1 copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "possibleBackground1 copy.jpg"; sourceTree = "<group>"; };
+		1259602A1D216C49008487F4 /* signUpPhoto copy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "signUpPhoto copy.jpeg"; sourceTree = "<group>"; };
 		12B859B31D107ACC00E883A6 /* BarMateCustomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarMateCustomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B859B61D107ACC00E883A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B859BB1D107ACC00E883A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		125960281D216C30008487F4 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				125960291D216C49008487F4 /* possibleBackground1 copy.jpg */,
+				1259602A1D216C49008487F4 /* signUpPhoto copy.jpeg */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 		12B859AA1D107ACC00E883A6 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 		12B859B51D107ACC00E883A6 /* BarMateCustomer */ = {
 			isa = PBXGroup;
 			children = (
+				125960281D216C30008487F4 /* image */,
 				12B859B61D107ACC00E883A6 /* AppDelegate.swift */,
 				12B859CB1D107DA700E883A6 /* storyboard */,
 				12B859CA1D107D9600E883A6 /* viewControllers */,
@@ -208,7 +222,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1259602C1D216C49008487F4 /* signUpPhoto copy.jpeg in Resources */,
 				12B859C11D107ACC00E883A6 /* LaunchScreen.storyboard in Resources */,
+				1259602B1D216C49008487F4 /* possibleBackground1 copy.jpg in Resources */,
 				12B859BE1D107ACC00E883A6 /* Assets.xcassets in Resources */,
 				12B859BC1D107ACC00E883A6 /* Main.storyboard in Resources */,
 				12B859C91D107CC900E883A6 /* GoogleService-Info.plist in Resources */,

@@ -26,7 +26,7 @@ class drinkMenuTableCell: UITableViewCell {
     func configurMenuCell(drink:Drink){
         
     drinkNameLabel.text! = drink.name
-    drinkPriceLabel.text! = String(drink.price)
+    drinkPriceLabel.text! = String(format:"$%.2f", drink.price)
     }
 }
 
