@@ -15,6 +15,7 @@ class confirmOrderViewController: UIViewController {
     @IBOutlet weak var drinkImageView: UIImageView!
     @IBOutlet weak var drinkIngredients: UILabel!
     @IBOutlet weak var drinkPrice: UILabel!
+    @IBOutlet weak var placeOrderButton: UIButton!
     
     var drink: Drink?
     var ref:FIRDatabaseReference = FIRDatabase.database().reference()
@@ -34,6 +35,8 @@ class confirmOrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //make button round
+        placeOrderButton.layer.cornerRadius = 8
 
         drinkNameLabel.text = drink!.name
         drinkPrice.text = String(format:"$%.2f", drink!.price)
