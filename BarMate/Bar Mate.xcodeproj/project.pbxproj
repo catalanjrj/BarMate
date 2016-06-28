@@ -40,7 +40,7 @@
 		125960311D220F52008487F4 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
 		125960321D220F52008487F4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		125960331D220F52008487F4 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
-		12B859811D0B02C000E883A6 /* BarMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12B859811D0B02C000E883A6 /* Bar Mate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bar Mate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B859841D0B02C000E883A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSignUpViewController.swift; sourceTree = "<group>"; };
 		12B859891D0B02C000E883A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		12B859821D0B02C000E883A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12B859811D0B02C000E883A6 /* BarMate.app */,
+				12B859811D0B02C000E883A6 /* Bar Mate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12B859801D0B02C000E883A6 /* BarMate */ = {
+		12B859801D0B02C000E883A6 /* Bar Mate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12B859931D0B02C000E883A6 /* Build configuration list for PBXNativeTarget "BarMate" */;
+			buildConfigurationList = 12B859931D0B02C000E883A6 /* Build configuration list for PBXNativeTarget "Bar Mate" */;
 			buildPhases = (
 				DA85BF3C36D3511AFFCB235E /* 📦 Check Pods Manifest.lock */,
 				12B8597D1D0B02C000E883A6 /* Sources */,
@@ -183,9 +183,9 @@
 			);
 			dependencies = (
 			);
-			name = BarMate;
+			name = "Bar Mate";
 			productName = BarMate;
-			productReference = 12B859811D0B02C000E883A6 /* BarMate.app */;
+			productReference = 12B859811D0B02C000E883A6 /* Bar Mate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 12B8597C1D0B02C000E883A6 /* Build configuration list for PBXProject "BarMate" */;
+			buildConfigurationList = 12B8597C1D0B02C000E883A6 /* Build configuration list for PBXProject "Bar Mate" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,7 +217,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12B859801D0B02C000E883A6 /* BarMate */,
+				12B859801D0B02C000E883A6 /* Bar Mate */,
 			);
 		};
 /* End PBXProject section */
@@ -421,7 +421,7 @@
 				INFOPLIST_FILE = BarMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Catalan.BarMate";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bar Mate";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -434,7 +434,7 @@
 				INFOPLIST_FILE = BarMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jorge-Catalan.BarMate";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bar Mate";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -442,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12B8597C1D0B02C000E883A6 /* Build configuration list for PBXProject "BarMate" */ = {
+		12B8597C1D0B02C000E883A6 /* Build configuration list for PBXProject "Bar Mate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12B859911D0B02C000E883A6 /* Debug */,
@@ -451,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12B859931D0B02C000E883A6 /* Build configuration list for PBXNativeTarget "BarMate" */ = {
+		12B859931D0B02C000E883A6 /* Build configuration list for PBXNativeTarget "Bar Mate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12B859941D0B02C000E883A6 /* Debug */,

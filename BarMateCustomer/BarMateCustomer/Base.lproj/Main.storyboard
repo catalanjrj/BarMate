@@ -9,7 +9,7 @@
         <!--Customer Login View Controller-->
         <scene sceneID="KrU-x7-CuU">
             <objects>
-                <viewController id="5Bt-Uz-PWJ" customClass="customerLoginViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5Bt-Uz-PWJ" customClass="customerLoginViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P61-8V-CgS"/>
                         <viewControllerLayoutGuide type="bottom" id="Ydi-Pd-FiO"/>
@@ -133,7 +133,7 @@
         <!--Customer Signup View Controller-->
         <scene sceneID="pIg-qV-4JD">
             <objects>
-                <viewController id="nFZ-2z-yn8" customClass="customerSignupViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nFZ-2z-yn8" customClass="customerSignupViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IyI-J8-9XL"/>
                         <viewControllerLayoutGuide type="bottom" id="Rvj-Jg-IYZ"/>
@@ -243,7 +243,7 @@
         <!--Create User Profile View Controller-->
         <scene sceneID="yOB-sc-e6q">
             <objects>
-                <viewController id="mv4-gA-1dF" customClass="createUserProfileViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mv4-gA-1dF" customClass="createUserProfileViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Bx-3M-NVE"/>
                         <viewControllerLayoutGuide type="bottom" id="3cY-7g-6wg"/>
@@ -350,14 +350,14 @@
         <!--barSelectTableViewController-->
         <scene sceneID="3ln-oI-Ttz">
             <objects>
-                <tableViewController id="OXx-Y2-5l5" userLabel="barSelectTableViewController" customClass="selectBarTableViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="OXx-Y2-5l5" userLabel="barSelectTableViewController" customClass="selectBarTableViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bdF-P9-Or7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barCell" id="fzY-Mb-ua1" customClass="barCellTableViewCell" customModule="BarMateCustomer" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barCell" id="fzY-Mb-ua1" customClass="barCellTableViewCell" customModule="Bar_Mate" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fzY-Mb-ua1" id="GLh-tg-ICY">
@@ -400,7 +400,7 @@
         <!--barMenuViewController-->
         <scene sceneID="eiF-Pn-y9b">
             <objects>
-                <viewController title="Menu" id="qmM-6W-ZKc" userLabel="barMenuViewController" customClass="barMenuViewViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menu" id="qmM-6W-ZKc" userLabel="barMenuViewController" customClass="barMenuViewViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dsg-IS-H8N"/>
                         <viewControllerLayoutGuide type="bottom" id="w8g-DP-0GD"/>
@@ -422,7 +422,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkMenuTableCell" rowHeight="83" id="zCf-GH-kCj" customClass="drinkMenuTableCell" customModule="BarMateCustomer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkMenuTableCell" rowHeight="83" id="zCf-GH-kCj" customClass="drinkMenuTableCell" customModule="Bar_Mate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zCf-GH-kCj" id="fiH-tk-6Tj">
@@ -491,10 +491,10 @@
             </objects>
             <point key="canvasLocation" x="46" y="903"/>
         </scene>
-        <!--Confirm Order View Controller-->
+        <!--Order-->
         <scene sceneID="JZs-xj-w59">
             <objects>
-                <viewController id="9HT-wn-Rmb" customClass="confirmOrderViewController" customModule="BarMateCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9HT-wn-Rmb" customClass="confirmOrderViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="luy-hi-3TI"/>
                         <viewControllerLayoutGuide type="bottom" id="FQE-BP-flF"/>
@@ -594,6 +594,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Order" id="oNt-82-jU5"/>
                     <connections>
                         <outlet property="drinkIngredients" destination="PqU-wn-C8R" id="vff-XI-ytC"/>
                         <outlet property="drinkNameLabel" destination="HJS-Eh-QE9" id="ahO-sE-aPd"/>
