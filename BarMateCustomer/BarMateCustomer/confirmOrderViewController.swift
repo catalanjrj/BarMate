@@ -35,10 +35,13 @@ class confirmOrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //make button round
+        //set the way placeOrderButton displays
         placeOrderButton.layer.cornerRadius = 8
-
+        placeOrderButton.layer.borderColor = UIColor .whiteColor().CGColor
+        placeOrderButton.layer.borderWidth = 1
         drinkNameLabel.text = drink!.name
+        
+        //set label text and formate Float
         drinkPrice.text = String(format:"$%.2f", drink!.price)
         drinkIngredients.text = drink!.ingredients
     }

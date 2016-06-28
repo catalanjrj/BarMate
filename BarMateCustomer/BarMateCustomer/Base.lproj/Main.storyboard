@@ -512,25 +512,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzm-Ng-G5c">
-                                <rect key="frame" x="232" y="380" width="136" height="44"/>
-                                <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="B0x-No-v4s"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Place Order">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="B0x-No-v4s"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="placeOrderButton:" destination="9HT-wn-Rmb" eventType="touchUpInside" id="TTh-zV-c6G"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price$$$$ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-Lu-fAX">
                                 <rect key="frame" x="257" y="333" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -560,21 +541,40 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzm-Ng-G5c">
+                                <rect key="frame" x="221" y="377" width="158" height="44"/>
+                                <color key="backgroundColor" red="0.07550534448" green="0.1184784961" blue="0.19720329119999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="B0x-No-v4s"/>
+                                    <constraint firstAttribute="width" constant="158" id="YBJ-AH-Dhi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Place Order">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.25512903180574692" green="0.30631360688970011" blue="0.42405660069879014" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="B0x-No-v4s"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="placeOrderButton:" destination="9HT-wn-Rmb" eventType="touchUpInside" id="TTh-zV-c6G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3490216974" green="0.41011712620000002" blue="0.53894822139999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HJS-Eh-QE9" firstAttribute="centerX" secondItem="RH6-kg-e4m" secondAttribute="centerX" id="27m-KR-dYS"/>
                             <constraint firstItem="PqU-wn-C8R" firstAttribute="trailing" secondItem="HJS-Eh-QE9" secondAttribute="trailing" id="2VP-di-bMs"/>
-                            <constraint firstItem="pzm-Ng-G5c" firstAttribute="top" secondItem="s6f-Lu-fAX" secondAttribute="bottom" constant="26" id="4xf-Qj-ybv"/>
+                            <constraint firstItem="pzm-Ng-G5c" firstAttribute="top" secondItem="s6f-Lu-fAX" secondAttribute="bottom" constant="23" id="66n-OS-grx"/>
                             <constraint firstItem="HJS-Eh-QE9" firstAttribute="top" secondItem="luy-hi-3TI" secondAttribute="bottom" constant="45" id="6Z3-Km-FtT"/>
                             <constraint firstItem="pzm-Ng-G5c" firstAttribute="centerX" secondItem="RH6-kg-e4m" secondAttribute="centerX" id="ANn-2x-QWC"/>
-                            <constraint firstItem="pzm-Ng-G5c" firstAttribute="centerX" secondItem="RH6-kg-e4m" secondAttribute="centerX" id="Az9-uE-yDC"/>
                             <constraint firstItem="PqU-wn-C8R" firstAttribute="top" secondItem="RH6-kg-e4m" secondAttribute="top" constant="231" id="OWo-pm-rbd"/>
                             <constraint firstItem="PqU-wn-C8R" firstAttribute="trailing" secondItem="RH6-kg-e4m" secondAttribute="trailingMargin" id="Xvx-gF-TEi"/>
                             <constraint firstItem="PqU-wn-C8R" firstAttribute="top" secondItem="PXw-fe-0Mm" secondAttribute="bottom" constant="8" symbolic="YES" id="YWO-1Q-0BB"/>
                             <constraint firstItem="PXw-fe-0Mm" firstAttribute="leading" secondItem="PqU-wn-C8R" secondAttribute="leading" id="ZV6-1x-wc4"/>
                             <constraint firstItem="ogP-ue-zxm" firstAttribute="trailing" secondItem="PqU-wn-C8R" secondAttribute="trailing" id="bKr-Rw-Szh"/>
-                            <constraint firstItem="pzm-Ng-G5c" firstAttribute="centerX" secondItem="RH6-kg-e4m" secondAttribute="centerX" id="bsC-pB-ELu"/>
                             <constraint firstItem="s6f-Lu-fAX" firstAttribute="centerX" secondItem="RH6-kg-e4m" secondAttribute="centerX" id="cpU-GI-Mkv"/>
                             <constraint firstItem="PXw-fe-0Mm" firstAttribute="trailing" secondItem="PqU-wn-C8R" secondAttribute="trailing" id="gEC-a2-xZ5"/>
                             <constraint firstItem="s6f-Lu-fAX" firstAttribute="top" secondItem="ogP-ue-zxm" secondAttribute="bottom" constant="8" symbolic="YES" id="j5z-SS-sX4"/>
@@ -584,7 +584,7 @@
                             <constraint firstItem="PqU-wn-C8R" firstAttribute="leading" secondItem="RH6-kg-e4m" secondAttribute="leadingMargin" id="snG-OH-HAo"/>
                             <constraint firstItem="ogP-ue-zxm" firstAttribute="leading" secondItem="PqU-wn-C8R" secondAttribute="leading" id="tK0-CD-kgJ"/>
                             <constraint firstItem="pzm-Ng-G5c" firstAttribute="leading" secondItem="RH6-kg-e4m" secondAttribute="leading" constant="208" id="wRr-QY-Vlt"/>
-                            <constraint firstItem="s6f-Lu-fAX" firstAttribute="centerX" secondItem="pzm-Ng-G5c" secondAttribute="centerX" id="z4W-Aa-ZQA"/>
+                            <constraint firstItem="pzm-Ng-G5c" firstAttribute="centerX" secondItem="s6f-Lu-fAX" secondAttribute="centerX" id="zNI-TB-ri3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
