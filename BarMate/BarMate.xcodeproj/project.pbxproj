@@ -12,6 +12,10 @@
 		120158521D12ED2D00055BA5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120158511D12ED2D00055BA5 /* Order.swift */; };
 		1209EB661D2060480031A64D /* signUpPhoto.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1209EB651D2060480031A64D /* signUpPhoto.jpeg */; };
 		122033A71D1880FC005BFF5A /* orderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122033A61D1880FC005BFF5A /* orderCell.swift */; };
+		125960341D220F52008487F4 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125960301D220F52008487F4 /* Icon-40@2x.png */; };
+		125960351D220F52008487F4 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125960311D220F52008487F4 /* Icon-40@3x.png */; };
+		125960361D220F52008487F4 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125960321D220F52008487F4 /* Icon-60@2x.png */; };
+		125960371D220F52008487F4 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125960331D220F52008487F4 /* Icon-60@3x.png */; };
 		12B859851D0B02C000E883A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859841D0B02C000E883A6 /* AppDelegate.swift */; };
 		12B859871D0B02C000E883A6 /* BarSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */; };
 		12B8598A1D0B02C000E883A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B859881D0B02C000E883A6 /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 		120158511D12ED2D00055BA5 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		1209EB651D2060480031A64D /* signUpPhoto.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signUpPhoto.jpeg; sourceTree = "<group>"; };
 		122033A61D1880FC005BFF5A /* orderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderCell.swift; sourceTree = "<group>"; };
+		125960301D220F52008487F4 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		125960311D220F52008487F4 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		125960321D220F52008487F4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		125960331D220F52008487F4 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		12B859811D0B02C000E883A6 /* BarMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B859841D0B02C000E883A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B859861D0B02C000E883A6 /* BarSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSignUpViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +79,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1259602F1D220F2C008487F4 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				125960301D220F52008487F4 /* Icon-40@2x.png */,
+				125960311D220F52008487F4 /* Icon-40@3x.png */,
+				125960321D220F52008487F4 /* Icon-60@2x.png */,
+				125960331D220F52008487F4 /* Icon-60@3x.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 		12B859781D0B02C000E883A6 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +115,7 @@
 		12B859831D0B02C000E883A6 /* BarMate */ = {
 			isa = PBXGroup;
 			children = (
+				1259602F1D220F2C008487F4 /* icons */,
 				12B859841D0B02C000E883A6 /* AppDelegate.swift */,
 				12B859D21D11A15F00E883A6 /* Objects */,
 				12B859A91D10792200E883A6 /* storyboard */,
@@ -208,12 +228,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B8598F1D0B02C000E883A6 /* LaunchScreen.storyboard in Resources */,
+				125960361D220F52008487F4 /* Icon-60@2x.png in Resources */,
 				12B8599F1D0B296F00E883A6 /* GoogleService-Info.plist in Resources */,
 				12B859A71D10772500E883A6 /* possibleBackground1.jpg in Resources */,
 				12B859A51D10770B00E883A6 /* possibleBackground1.jpg in Resources */,
+				125960351D220F52008487F4 /* Icon-40@3x.png in Resources */,
 				1209EB661D2060480031A64D /* signUpPhoto.jpeg in Resources */,
+				125960341D220F52008487F4 /* Icon-40@2x.png in Resources */,
 				12B8598C1D0B02C000E883A6 /* Assets.xcassets in Resources */,
 				12B8598A1D0B02C000E883A6 /* Main.storyboard in Resources */,
+				125960371D220F52008487F4 /* Icon-60@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
