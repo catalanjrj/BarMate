@@ -9,7 +9,7 @@
         <!--LoginViewController-->
         <scene sceneID="PZe-XF-QIH">
             <objects>
-                <viewController id="fDg-no-Sek" userLabel="LoginViewController" customClass="LoginViewController" customModule="BarMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fDg-no-Sek" userLabel="LoginViewController" customClass="LoginViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ohF-lI-E6C"/>
                         <viewControllerLayoutGuide type="bottom" id="PJU-N6-rI0"/>
@@ -130,13 +130,13 @@
         <!--Orders-->
         <scene sceneID="pgI-nh-BnP">
             <objects>
-                <tableViewController storyboardIdentifier="OrderID" id="sLg-aH-1VN" customClass="OrderTableViewController" customModule="BarMate" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="OrderID" id="sLg-aH-1VN" customClass="OrderTableViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="zb2-Bv-BMJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="85" id="OAF-I6-4gC" customClass="orderCell" customModule="BarMate" customModuleProvider="target">
+                            <tableViewCell opaque="NO" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="85" id="OAF-I6-4gC" customClass="orderCell" customModule="Bar_Mate" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="OAF-I6-4gC" id="g0U-rv-r0x">
@@ -206,7 +206,7 @@
         <!--BarSignUpViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="BarSignUpViewController" customClass="BarSignUpViewController" customModule="BarMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="BarSignUpViewController" customClass="BarSignUpViewController" customModule="Bar_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
