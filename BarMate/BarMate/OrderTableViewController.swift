@@ -10,11 +10,15 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 import FirebaseAuth
+import AVFoundation
 
 
 
 
 class OrderTableViewController: UITableViewController {
+    
+    // TableView Cell sound
+    var cellSound: AVAudioPlayer?
     
     
 
@@ -40,9 +44,12 @@ class OrderTableViewController: UITableViewController {
         openOrders()
         completedOrders()
         fulfilledOrders()
+        
+        //create audioPlayer for cellNotification
+        if let cellNotification = self.playCellSound("suppressed", type: "mp3"){
+            self.cellSound = cellNotification
+        }
 
-        //  let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(OrderTableViewController.insertNewObject(_:)))
-       // self.navigationItem.rightBarButtonItem = addButton
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -53,7 +60,24 @@ class OrderTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-            }
+        }
+    //create audioPlayer Sound function
+    func playCellSound(file:NSString, type:NSString) -> AVAudioPlayer?  {
+        let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
+        let url = NSURL.fileURLWithPath(path!)
+        
+        var audioPlayer: AVAudioPlayer?
+        
+        do {
+        try audioPlayer = AVAudioPlayer(contentsOfURL: (url))
+    
+        
+        } catch {
+print("Player not AVailable")
+        }
+    return audioPlayer
+    
+    }
     
     func openOrders(){
         self.ref.child("Orders/open/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildAdded, withBlock: {(snapshot) in
@@ -64,8 +88,9 @@ class OrderTableViewController: UITableViewController {
             self.openOrderArray.append(snapshot.key)
             
             self.openOrderDict[snapshot.key] = Order(orderData: snapshot.value as! [String : AnyObject])
-            
-            
+            self.cellSound?.play()
+
+
             
             
             dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
@@ -75,6 +100,7 @@ class OrderTableViewController: UITableViewController {
             self.openOrderDict.removeValueForKey(snapshot.key)
             let  openIndex =  self.openOrderArray.indexOf(snapshot.key)
             self.openOrderArray.removeAtIndex(openIndex!)
+            
             
             dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
             
@@ -256,45 +282,7 @@ class OrderTableViewController: UITableViewController {
           return nil
     }
         }
-    
-//    
-//        let completedButton = UITableViewRowAction(style: .Normal, title: "completed") { action, index in
-//            print("completed button tapped")
-//            
-//           let openOrders = self.openOrderArray[indexPath.row]
-//            let order = self.openOrderDict[openOrders]
-//            
-//
-//            
-//            self.ref.child("Orders").child("open").child(order!.uid).removeValue()
-// 
-//            
-//            let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
-//            
-//            self.ref.child("Orders").child("completed").child(order!.uid).updateChildValues(orderToMove)
-//          
-//
-//        }
-//        completedButton.backgroundColor = UIColor.orangeColor()
-    
-//        let fulfilled = UITableViewRowAction(style: .Normal, title: "fulfilled") { action, index in
-//            print("fulfilled button tapped")
-//            
-//              let completedOrders = self.completedOrderArray[index.row]
-//              let order = self.completedOrderDict[completedOrders]
-//            
-//                 self.ref.child("Orders").child("completed").child(order!.uid).removeValue()
-//            
-//                 let orderToMove = ["uid" :  order!.uid , "user" : order!.user, "drink": order!.drink, "orderTime": order!.orderTime,  "orderId": order!.orderId, "bar":"aowifjeafasg"]
-//            
-//            self.ref.child("Orders").child("fulfilled").child(order!.uid).updateChildValues(orderToMove)
-//         
-//     }
-//        fulfilled.backgroundColor = UIColor.grayColor()
-//    
-
-    
-    
+         
 override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true

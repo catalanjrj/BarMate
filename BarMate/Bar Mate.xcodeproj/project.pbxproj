@@ -24,9 +24,9 @@
 		12B859991D0B0A7E00E883A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859981D0B0A7E00E883A6 /* LoginViewController.swift */; };
 		12B8599F1D0B296F00E883A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12B8599E1D0B296F00E883A6 /* GoogleService-Info.plist */; };
 		12B859A11D0EFACE00E883A6 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859A01D0EFACE00E883A6 /* OrderTableViewController.swift */; };
-		12B859A51D10770B00E883A6 /* possibleBackground1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12B859A41D10770B00E883A6 /* possibleBackground1.jpg */; };
 		12B859A71D10772500E883A6 /* possibleBackground1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12B859A61D10772500E883A6 /* possibleBackground1.jpg */; };
 		12B859D41D11A18700E883A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D31D11A18700E883A6 /* User.swift */; };
+		12F167571D32E89B00932F7F /* suppressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F167561D32E89B00932F7F /* suppressed.mp3 */; };
 		AC280EA532414B4B129FC562 /* Pods_BarMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF10D402CD540B6C5A0138B /* Pods_BarMate.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +53,7 @@
 		12B859A41D10770B00E883A6 /* possibleBackground1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = possibleBackground1.jpg; sourceTree = "<group>"; };
 		12B859A61D10772500E883A6 /* possibleBackground1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = possibleBackground1.jpg; sourceTree = "<group>"; };
 		12B859D31D11A18700E883A6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		12F167561D32E89B00932F7F /* suppressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = suppressed.mp3; sourceTree = "<group>"; };
 		3AF10D402CD540B6C5A0138B /* Pods_BarMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839321182F643C35B0BB312 /* Pods-BarMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarMate/Pods-BarMate.debug.xcconfig"; sourceTree = "<group>"; };
 		B9133997B4543C36D80D68C7 /* Pods-BarMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarMate/Pods-BarMate.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		12B859831D0B02C000E883A6 /* BarMate */ = {
 			isa = PBXGroup;
 			children = (
+				12F167551D32E88100932F7F /* supportingFIles */,
 				1259602F1D220F2C008487F4 /* icons */,
 				12B859841D0B02C000E883A6 /* AppDelegate.swift */,
 				12B859D21D11A15F00E883A6 /* Objects */,
@@ -155,6 +157,14 @@
 				122033A61D1880FC005BFF5A /* orderCell.swift */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		12F167551D32E88100932F7F /* supportingFIles */ = {
+			isa = PBXGroup;
+			children = (
+				12F167561D32E89B00932F7F /* suppressed.mp3 */,
+			);
+			name = supportingFIles;
 			sourceTree = "<group>";
 		};
 		AFF52C3CE163EC9D0FC1AE62 /* Frameworks */ = {
@@ -231,7 +241,7 @@
 				125960361D220F52008487F4 /* Icon-60@2x.png in Resources */,
 				12B8599F1D0B296F00E883A6 /* GoogleService-Info.plist in Resources */,
 				12B859A71D10772500E883A6 /* possibleBackground1.jpg in Resources */,
-				12B859A51D10770B00E883A6 /* possibleBackground1.jpg in Resources */,
+				12F167571D32E89B00932F7F /* suppressed.mp3 in Resources */,
 				125960351D220F52008487F4 /* Icon-40@3x.png in Resources */,
 				1209EB661D2060480031A64D /* signUpPhoto.jpeg in Resources */,
 				125960341D220F52008487F4 /* Icon-40@2x.png in Resources */,
