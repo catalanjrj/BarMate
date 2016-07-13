@@ -82,25 +82,7 @@ class selectBarTableViewController: UITableViewController {
 
    
 
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        _ = tableView.indexPathForSelectedRow!
-//        if let _ = tableView.cellForRowAtIndexPath(indexPath) {
-//            self.performSegueWithIdentifier("barMenuSegue", sender: self)
-//        }
-//        
-//    }
 
-
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "barMenuSegue"{
-//         if let destinationController = segue.destinationViewController as? barMenuViewViewController{
-//             let path = tableView.indexPathForSelectedRow
-//            let cell = tableView.cellForRowAtIndexPath(path!)
-//          
-//            destinationController.menu = (cell?.textLabel!.text)!
-//            
-//            }
-//        }
     
         
     }

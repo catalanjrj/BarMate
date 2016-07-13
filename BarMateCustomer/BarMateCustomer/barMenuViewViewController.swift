@@ -21,12 +21,16 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //present drinkReady Alert
+        drinkReadyPopUp()
+ 
 
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        // remove observers when user leaves view 
         self.ref.removeAllObservers()
         
     }
@@ -48,10 +52,9 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
                 
                 
                 self.barMenuArray.append(key)
-//                for(menuItemKey,MenuItemValue) in value["barMenu"] as! [String:AnyObject] {
-                    self.barMenuDict[key] = Drink(data: value as! [String:AnyObject])
+                self.barMenuDict[key] = Drink(data: value as! [String:AnyObject])
           
-              //  }
+    
             }
             
             dispatch_async(dispatch_get_main_queue(), {self.barMenuTableView.reloadData()})
@@ -113,6 +116,31 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
     barNameLabel.text = bar.barName
     
     }
-  
+    func drinkReadyPopUp(){
+        _ = self.ref.child("Orders/completed/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildAdded, withBlock: {(snapshot) in
+            
+            
+            if snapshot.value != nil{
+                let drinkReadyAlert = UIAlertController(title:"Order Status", message: "Your \(Drink.init().name) is ready for pick up!", preferredStyle: .Alert)
+                let okAction = UIAlertAction(title:"Ok",style: .Default){(action) in
+                }
+                drinkReadyAlert.addAction(okAction)
+                self.presentViewController(drinkReadyAlert, animated:true){}
+                
+                return
+                
+            }else{
+                
+                return
+                
+            }
+            
+            
+            
+        })
+    }
+
+    
+
 
 }

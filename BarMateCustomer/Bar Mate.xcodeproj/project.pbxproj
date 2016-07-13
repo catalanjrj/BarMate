@@ -26,6 +26,7 @@
 		12B859CF1D107EC100E883A6 /* customerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859CE1D107EC100E883A6 /* customerLoginViewController.swift */; };
 		12B859D11D107EDA00E883A6 /* customerSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D01D107EDA00E883A6 /* customerSignupViewController.swift */; };
 		12B859D61D11D0D200E883A6 /* createUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B859D51D11D0D200E883A6 /* createUserProfileViewController.swift */; };
+		C5FAB71E1D35563C00DAAB88 /* drinkReadyForPickUpAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FAB71D1D35563C00DAAB88 /* drinkReadyForPickUpAlertController.swift */; };
 		DDA0CA86663C938B5C4A629D /* Pods_BarMateCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE18B03240D39A6924462B /* Pods_BarMateCustomer.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		12B859D51D11D0D200E883A6 /* createUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createUserProfileViewController.swift; sourceTree = "<group>"; };
 		56984FB8423A9C0434678B9F /* Pods-BarMateCustomer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMateCustomer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarMateCustomer/Pods-BarMateCustomer.release.xcconfig"; sourceTree = "<group>"; };
 		7AFE18B03240D39A6924462B /* Pods_BarMateCustomer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarMateCustomer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5FAB71D1D35563C00DAAB88 /* drinkReadyForPickUpAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkReadyForPickUpAlertController.swift; sourceTree = "<group>"; };
 		EDB4FB1A3315AA11E8541DA8 /* Pods-BarMateCustomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarMateCustomer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarMateCustomer/Pods-BarMateCustomer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				122033B11D1C3783005BFF5A /* bar.swift */,
 				122033B31D1C37ED005BFF5A /* Drink.swift */,
 				122033B91D1DB96D005BFF5A /* order.swift */,
+				C5FAB71D1D35563C00DAAB88 /* drinkReadyForPickUpAlertController.swift */,
 			);
 			name = objects;
 			path = ..;
@@ -299,6 +302,7 @@
 				122033BA1D1DB96D005BFF5A /* order.swift in Sources */,
 				12B859CF1D107EC100E883A6 /* customerLoginViewController.swift in Sources */,
 				12B859B71D107ACC00E883A6 /* AppDelegate.swift in Sources */,
+				C5FAB71E1D35563C00DAAB88 /* drinkReadyForPickUpAlertController.swift in Sources */,
 				12B859D61D11D0D200E883A6 /* createUserProfileViewController.swift in Sources */,
 				122033B41D1C37ED005BFF5A /* Drink.swift in Sources */,
 				122033AB1D1C2509005BFF5A /* barCellTableViewCell.swift in Sources */,

@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        FIRApp.configure()
+        FIRApp.configure() 
         return true
+        
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
