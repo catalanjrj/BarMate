@@ -32,7 +32,7 @@ class selectBarTableViewController: UITableViewController {
         bars()
     
     }
-// retrive bars 
+// retrieve bars from firebase 
     func bars(){
             self.ref.child("Bars").observeEventType(FIRDataEventType.Value, withBlock: {(snapshot) in
                 guard snapshot.value != nil else{

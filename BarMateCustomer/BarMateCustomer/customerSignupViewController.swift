@@ -20,7 +20,7 @@ class customerSignupViewController: UIViewController {
         // if text field are not empty enable create account buttton and create account
         if customerEmailTextField.text != "" && customerPasswordTextField.text != "" {
             
-      createAccountbutton.enabled = true
+            createAccountbutton.enabled = true
             
             FIRAuth.auth()?.createUserWithEmail(customerEmailTextField.text!, password: customerPasswordTextField.text!, completion: {user, error in
                 if error != nil{

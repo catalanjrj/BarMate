@@ -83,10 +83,6 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
         
         
        cell.configurMenuCell(bar!)
-        
-
-        
-    
         return cell
     }
 
@@ -121,22 +117,18 @@ class barMenuViewViewController:UIViewController,UITableViewDelegate,UITableView
             
             
             if snapshot.value != nil{
-                let drinkReadyAlert = UIAlertController(title:"Order Status", message: "Your \(Drink.init().name) is ready for pick up!", preferredStyle: .Alert)
+                let drinkReadyAlert = UIAlertController(title:"Order Status", message: "Your order is ready for pick up!", preferredStyle: .Alert)
                 let okAction = UIAlertAction(title:"Ok",style: .Default){(action) in
                 }
                 drinkReadyAlert.addAction(okAction)
                 self.presentViewController(drinkReadyAlert, animated:true){}
                 
-                return
                 
             }else{
                 
                 return
                 
             }
-            
-            
-            
         })
     }
 

@@ -44,10 +44,7 @@ class customerLoginViewController: UIViewController {
 
                 
                 }
-            
-            
-            
-        })
+            })
     }
     @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
         try! FIRAuth.auth()!.signOut()
@@ -61,7 +58,7 @@ class customerLoginViewController: UIViewController {
         //make button round 
         loginButton.layer.cornerRadius = 8
         
-    
+        //hide keyboard
         self.hideKeyboardWhenTappedAround()
         
         // check to see if user already loggin to skip login screen 
@@ -72,16 +69,16 @@ class customerLoginViewController: UIViewController {
         })
     }
     
-        }
+}
 
 //dismiss keyboard when touch off of text fields
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
+    extension UIViewController {
+        func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard() {
+        func dismissKeyboard() {
         view.endEditing(true)
     }
     

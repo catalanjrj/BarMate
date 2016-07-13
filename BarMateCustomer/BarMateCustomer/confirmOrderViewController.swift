@@ -103,7 +103,7 @@ class confirmOrderViewController: UIViewController {
             newChild.updateChildValues(newOrderDict)
             
         //success alert!
-            let successAlert = UIAlertController(title:"",message:"Success!", preferredStyle: .Alert)
+            let successAlert = UIAlertController(title:"Success! ",message:"Your order has been placed", preferredStyle: .Alert)
             let OkAction = UIAlertAction(title:"Ok", style: .Default){(action) in
             }
             successAlert.addAction(OkAction)
@@ -118,7 +118,7 @@ class confirmOrderViewController: UIViewController {
     func drinkReadyPopUp(){
         _ = self.ref.child("Orders/completed/").queryOrderedByChild("bar").queryEqualToValue("aowifjeafasg").observeEventType(FIRDataEventType.ChildAdded, withBlock: {(snapshot) in
             if snapshot.value != nil{
-                let drinkReadyAlert = UIAlertController(title:"Order Status", message: "Your drink is ready for pick up!", preferredStyle: .Alert)
+                let drinkReadyAlert = UIAlertController(title:"Order Status", message: "Your order is ready for pick up!", preferredStyle: .Alert)
                 let okAction = UIAlertAction(title:"Ok",style: .Default){(action) in
                 }
                 drinkReadyAlert.addAction(okAction)
